@@ -1,0 +1,29 @@
+{
+  "name": "proof-of-concept-iodigital",
+  "version": "1.0.0",
+  "description": "online CV presentation tool",
+  "main": "index.js",
+  "type": "module",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r20222/proof-of-concept-iOdigital.git"
+  },
+  "author": "r20222",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/r20222/proof-of-concept-iOdigital/issues"
+  },
+  "homepage": "https://github.com/r20222/proof-of-concept-iOdigital#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}
