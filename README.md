@@ -29,7 +29,9 @@ Ik heb gebruik gemaakt van:
 * Ejs
 * Express
 * CSS
+* JavaScript
 * @supports
+* toDateString()
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
