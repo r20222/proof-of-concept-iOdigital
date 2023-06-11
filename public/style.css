@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+html{
+    font-family: 'Questrial', sans-serif;
+}
+body{
+    background-color: #FAF3DD;
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+.flexbox-svg-container{
+    float:right;
+}
+.name{
+    clear:right;
+    margin-top:1rem;
+}
+@supports (display: flex) {
+    .flexbox-svg-container{
+        display:flex;
+        justify-content: end;
+        float:none;
+    }
+    .name{
+        clear:none;
+        margin-top:0;
+    }
+}
+  
+
+
+/* skills animation (alleen zichtbaar bij js-enabled) */
+
+.skills-animation{
+    display:none;
+}
+
+/* article styling */
+article > h3{
+    border-bottom: 2px solid #68B0AB;
+    width:50%;
+}
+/* met onderstaande code wordt het overzichtelijker */
+.group-together{
+    margin-top:-1rem;
+}
+
+
+/* code hieronder is nog niet noodzakelijk */
+article p{
+    overflow-wrap: break-word;
+}
+@supports (text-wrap:balance) {
+    article p{
+        text-wrap: balance;
+    }
+}
+
