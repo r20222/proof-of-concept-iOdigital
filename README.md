@@ -32,7 +32,8 @@ Ik heb gebruik gemaakt van:
 * JavaScript
 * @supports
 * text-wrap:balance
-* toDateString()
+* .toLocaleString()
+* .getFullYear()
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
