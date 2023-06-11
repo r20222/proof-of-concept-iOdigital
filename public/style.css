@@ -47,12 +47,12 @@ article > h3{
 
 
 /* code hieronder is nog niet noodzakelijk */
-article p{
+/* article p{
     overflow-wrap: break-word;
 }
 @supports (text-wrap:balance) {
     article p{
         text-wrap: balance;
     }
-}
+} */
 
