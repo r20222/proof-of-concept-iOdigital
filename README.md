@@ -31,6 +31,7 @@ Ik heb gebruik gemaakt van:
 * CSS
 * JavaScript
 * @supports
+* text-wrap:balance
 * toDateString()
 
 ## Installatie
