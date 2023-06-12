@@ -36,6 +36,7 @@ Ik heb gebruik gemaakt van:
 * .getFullYear()
 * @media (prefers-color-scheme:dark)
 * details/summary (in en uitklap)
+* @media (prefers-reduced-motion)
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
