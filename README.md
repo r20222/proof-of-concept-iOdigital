@@ -34,6 +34,7 @@ Ik heb gebruik gemaakt van:
 * text-wrap:balance
 * .toLocaleString()
 * .getFullYear()
+* @media (prefers-color-scheme:dark)
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
