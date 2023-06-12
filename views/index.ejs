@@ -20,36 +20,36 @@
     <li>SAFe</li>
 </ul>
 
-<article>
-    <h3>Introduction</h3>
+<details open>
+    <summary>Introduction</summary>
     <p>
         <%- data.introduction %>
     </p>
-</article>
+</details>
 
-<article>
-    <h3>Motivation</h3>
+<details open>
+    <summary>Motivation</summary>
     <p>
        <%- data.motivation %>
     </p>
-</article>
+</details>
 
-<article>
-    <h3>Skills</h3>
+<details open>
+    <summary>Skills</summary>
     <ul>
         <% data.skills.forEach(skill => { %>
             <li><%= skill.label %></li>
         <% }); %>
         
     </ul>
-</article>
+</details>
 
 
 
 
 
-<article>
-    <h3>Projects via iO</h3>
+<details open>
+    <summary>Projects via iO</summary>
     <% data.projects.forEach(project => { %>
 
         <!-- Chatgpt heeft mij geholpen de data correct op te halen, het gaat om een unix-tijdstempel -->
@@ -75,10 +75,10 @@
             </ul>
         </section>
     <% }); %>
-</article>
+    </details>
 
-<article>
-    <h3>Work experience</h3>
+<details open>
+    <summary>Work experience</summary>
     <% data.experience.forEach(experience => { %>
 
         <!-- Voor de startdata -->
@@ -102,10 +102,10 @@
             </ul>
         </section>
     <% }) %>
-</article>
+    </details>
 
-<article>
-    <h3>Education</h3>
+<details open>
+    <summary>Education</summary>
     <% data.education.forEach(edu => { %>
 
         <!-- Voor de startdata -->
@@ -122,10 +122,10 @@
             <h6 class="group-together"><%= date.toLocaleString('en-US', { month: 'long' }) %> <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', { month: 'long' }) %> <%= endDate.getFullYear() %></h6>
         </section>
     <% }) %>
-</article>
+    </details>
 
-<article>
-    <h3>Languages</h3>
+<details open>
+    <summary>Languages</summary>
     <% data.languages.forEach(lang => { %>
         <section>
             <% if (lang.language && lang.proficiency) { %>
@@ -137,10 +137,10 @@
            
         </section>
     <% }) %>
-</article>
+</details>
 
-<article>
-    <h3>Publications</h3>
+<details open>
+    <summary>Publications</summary>
     <% data.publications.forEach(pub => { %>
         <section>
             <h4><%- pub.title %></h4>
@@ -148,10 +148,10 @@
             <a href="<%- pub.link %>"><%- pub.link %></a>
         </section>
     <% }) %>
-</article>
+</details>
 
-<article>
-    <h3>Side projects</h3>
+<details open>
+    <summary>Side projects</summary>
     <% data.sideProjects.forEach(side => { %>
         <section>
             <h4><%- side.title %></h4>
@@ -159,17 +159,17 @@
             <a href="<%- side.link %>"><%- side.link %></a>
         </section>
     <% }) %>
-</article>
+</details>
 
-<article>
-    <h3>Social links</h3>
+<details open>
+    <summary>Social links</summary>
     <% data.socialLinks.forEach(link => { %>
         <section>
             <h4><%- link.linktype %></h4>
             <a href="<%- link.link %>"><%- link.link %></a>
         </section>
     <% }) %>
-</article>
+</details>
 
 
 

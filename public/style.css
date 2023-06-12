@@ -55,6 +55,7 @@ body{
     display:none;
 }
 
+
 /* article styling */
 article > h3{
     border-bottom: 2px solid #68B0AB;
@@ -64,6 +65,21 @@ article > h3{
 .group-together{
     margin-top:-1rem;
 }
+summary{
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+
+    border-bottom: 2px solid #68B0AB;
+    width:50%;
+}
+summary::marker {
+    content: "";
+  }
 
 
 /* code hieronder is nog niet noodzakelijk */
