@@ -1,0 +1,277 @@
+{
+  "experience": [
+    {
+      "role": "Frontend developer",
+      "startDate": 1535798040,
+      "description": "At Bank, Beau is responsible for the realization of a component-based architecture for frontend code with the aim of being able to roll out new functionality into production fully automatically. All online applications within SNS must ultimately use this new architecture. This not only for the SNS brand but also for daughter labels such as ASN and Zwitserleven. Beau is member of the core team that supports various feature teams by building the necessary components and tools for automated testing and code releases.",
+      "company": "Bank2",
+      "stackAndTechniques": [
+        {
+          "name": "Angular"
+        },
+        {
+          "name": "Cypress"
+        },
+        {
+          "name": "Jest"
+        }
+      ],
+      "endDate": 1567247640
+    },
+    {
+      "role": "Frontend Developer",
+      "company": "MoneyMaker",
+      "description": "MoneyMaker is the leading supplier of cash management solutions . MoneyMaker makes cash flows safer and more efficient for companies. This is done with various products including a new money counter / vault combination that is technically based on a Raspberry Pi. Beau has been asked to realize an application for visualizing data supplied by this new product. This frontend application must run on a Raspberry Pi and provide insight into the content and transactions on the device. Beau has run an AngularJS application on a Raspberry Pi through a web server that is now offered as a software solution to customers as a standard part of the product. Techniques: Javascript, HTML5, CSS3, Raspberry Pi, Bootstrap",
+      "endDate": 1535711760,
+      "startDate": 1496313360,
+      "stackAndTechniques": [
+        {
+          "name": "JavaScript"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "Bootstrap"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "Docker"
+        }
+      ]
+    },
+    {
+      "company": "Rethinking live",
+      "stackAndTechniques": [],
+      "endDate": 1493589600,
+      "description": "After a few years of studying, I really needed a break and travelled the world to taste different types of flour. I stayed in France long because they have the best bread in the world.",
+      "startDate": 1441058400,
+      "role": "Sabbatical",
+      "city": "Worldwide"
+    }
+  ],
+  "personalia": {
+    "email": "beau.ter.ham@iodigital.com",
+    "gender": "Male",
+    "lastName": "ter Ham",
+    "city": "Breadtown",
+    "firstName": "Beau",
+    "phone": {
+      "number": "",
+      "code": ""
+    },
+    "countryCode": "NL",
+    "nationality": ["NL"],
+    "dateOfBirth": 502284660,
+    "role": "Senior Ninja Frontend Master"
+  },
+  "lastUpdated": 1686036556424,
+  "skills": [
+    {
+      "label": "Angular",
+      "isActive": true,
+      "name": "Angular",
+      "value": "Angular"
+    },
+    {
+      "name": "TypeScript",
+      "label": "TypeScript",
+      "value": "TypeScript",
+      "isActive": true
+    },
+    {
+      "value": "JavaScript",
+      "name": "JavaScript",
+      "label": "JavaScript",
+      "isActive": true
+    },
+    {
+      "isActive": true,
+      "name": "Scrum",
+      "label": "Scrum",
+      "value": "Scrum"
+    },
+    {
+      "value": "Cypress",
+      "isActive": true,
+      "name": "Cypress",
+      "label": "Cypress"
+    },
+    {
+      "isActive": true,
+      "name": "GraphQL",
+      "label": "GraphQL",
+      "value": "GraphQL"
+    },
+    {
+      "value": "Agile",
+      "name": "Agile",
+      "label": "Agile",
+      "isActive": true
+    },
+    {
+      "isActive": true,
+      "value": "Jest",
+      "label": "Jest",
+      "name": "Jest"
+    },
+    {
+      "name": "CSS",
+      "value": "CSS",
+      "isActive": false,
+      "label": "CSS"
+    },
+    {
+      "name": "JQuery",
+      "value": "JQuery",
+      "isActive": true,
+      "label": "JQuery"
+    },
+    {
+      "isActive": true,
+      "name": "AngularJS",
+      "label": "AngularJS",
+      "value": "AngularJS"
+    },
+    {
+      "name": "Ember",
+      "isActive": true,
+      "label": "Ember",
+      "value": "Ember"
+    },
+    {
+      "isActive": true,
+      "label": "Laravel",
+      "name": "Laravel",
+      "value": "Laravel"
+    },
+    {
+      "name": "SVN",
+      "value": "SVN",
+      "isActive": true,
+      "label": "SVN"
+    },
+    {
+      "label": "SAFe",
+      "name": "SAFe",
+      "value": "SAFe",
+      "isActive": true
+    }
+  ],
+  "motivation": "Working at ING as a frontend developer sounds like an absolute dream. I mean, who wouldn't want to be a part of a company where web components reign supreme? Personally, I believe web components are the holy grail of app development, and without them, well, let's just say you can't build anything remotely decent. So, naturally, ING's focus on web components is a match made in heaven for me.\n\nBut that's not all. What really attracts me to ING is its sheer size. It's so massive that nobody would even notice if I'm not that good. I mean, who needs competence when you have the luxury of getting lost in a sea of employees? It's the perfect environment to fly under the radar and enjoy the illusion of being a coding prodigy. With such a colossal company, I can rest assured that my shortcomings won't be scrutinized, and I'll have plenty of opportunities to learn and grow without anyone batting an eye.",
+  "isArchived": false,
+  "education": [
+    {
+      "name": "Bachelor of Bread making",
+      "endDate": 1441058400,
+      "startDate": 1346450400,
+      "institute": "University of Amsterdam"
+    },
+    {
+      "endDate": 1480546800,
+      "startDate": 1480546800,
+      "institute": "French culinary school",
+      "name": "Certified baguette maker"
+    }
+  ],
+  "introduction": "Beau is an experienced frontend developer who likes to work on beautiful and user-friendly products. He studied graphic design. Throughout his career he worked in multiple areas of the development process and therefor can relate well with other stakeholders in the project. He likes to focus on complex frontend applications using the latest techniques, always trying to learn more.",
+  "id": "lXYNimp8fskF3UgcmvLt",
+  "languages": [
+    {
+      "language": {
+        "name": "Dutch",
+        "id": "kKt4fFXWHQLd51tcHeco"
+      },
+      "proficiency": {
+        "description": "A native language ability refers to a language you grew up speaking and have mastered all aspects of, including grammar, complex concepts and extensive vocabulary.",
+        "name": "Native",
+        "id": "pNPRkppm5ehIOrTVOoTy"
+      }
+    },
+    {
+      "language": {
+        "id": "LWRYlhclW9CuDZwoMUTd",
+        "name": "English"
+      },
+      "proficiency": {
+        "id": "303rwQdOTklwxJ6kxTxe",
+        "name": "Fluent",
+        "description": "A fluent language speaker can comfortably speak, write and understand the language with ease. They have full knowledge of the language, including colloquialisms, but are not native speakers of the language"
+      }
+    },
+    {
+      "proficiency": {
+        "name": "Intermediate",
+        "id": "K3j4A0E0k12TurLDkhSb",
+        "description": "An intermediate language speaker can hold a basic conversation in the language while speaking at a slower pace than a native speaker and requiring some repetition to understand the conversation. They have limited vocabulary knowledge, understand grammatical rules and have adequate reading abilities."
+      },
+      "language": {
+        "name": "French",
+        "id": "QxKbpg30AGlYGKI0HXl6"
+      }
+    },
+    {
+      "languageId": "kKt4fFXWHQLd51tcHeco",
+      "proficiencyId": "pNPRkppm5ehIOrTVOoTy"
+    }
+  ],
+  "name": "Beau ter Ham",
+  "projects": [
+    {
+      "role": "Frontend developer",
+      "company": "Bolletje",
+      "description": "Beau has developed a completely new dashboard application for Bolletje with Angular 5/6 based on existing specifications. The purpose of the application is to provide insight into the log data of Bolletje hardware. Through good monitoring and data aggregation, better service can be provided to the customers of Bolletje goods. The dashboard tooling is being rolled out for goods worldwide. Logging data is collected via a datacentre and is all displayed on the dashboard. Complex analyses can be performed in the dashboard to help clients run their hardware as productively as possible. In addition to the development of the software, Beau was responsible for the first production release of the dashboard. Beau has become the lead developer on this project within his scrum team. Recently he switched to the innovation team to work on the next improved version of this software.",
+      "startDate": 1569839564,
+      "stackAndTechniques": [
+        {
+          "name": "Angular"
+        },
+        {
+          "name": "CSS"
+        },
+        {
+          "name": "JavaScript"
+        }
+      ],
+      "endDate": null
+    }
+  ],
+  "socialLinks": [
+    {
+      "link": "https://github.com/BeauTerHam",
+      "linkType": "github",
+      "title": null
+    },
+    {
+      "title": null,
+      "link": "https://twitter.com/withButter",
+      "linkType": "twitter"
+    },
+    {
+      "linkType": "linkedin",
+      "title": null,
+      "link": "https://www.linkedin.com/in/user-not-found/"
+    }
+  ],
+  "sideProjects": [
+    {
+      "link": "https://github.com",
+      "title": "Bread flipping experiment",
+      "description": "A side project I put way too much time into analysing bread flipping in mid-air. Do check out the project to learn why bread flips!"
+    }
+  ],
+  "publications": [
+    {
+      "link": "https://medium.com",
+      "title": "Why AngularJS is still the best framework in 2023",
+      "description": "You know you like it, so why you don't use it?!?"
+    },
+    {
+      "link": "http://dev.to/my-crosissant",
+      "description": "Using large language models to digest all date available in the world about creating croissants. It resulted in having the perfect recipe for a croissant.\nAfter multiple theft attempts the recipe is now stored in a vault at Le Louvre in Paris.",
+      "title": "How to use AI to create the perfect croissant"
+    }
+  ]
+}

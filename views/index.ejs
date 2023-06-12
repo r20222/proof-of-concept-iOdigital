@@ -144,7 +144,7 @@
     <% data.publications.forEach(pub => { %>
         <section>
             <h4><%- pub.title %></h4>
-            <h5><%- pub.description %></h5>
+            <p><%- pub.description %></p>
             <a href="<%- pub.link %>"><%- pub.link %></a>
         </section>
     <% }) %>
@@ -155,12 +155,21 @@
     <% data.sideProjects.forEach(side => { %>
         <section>
             <h4><%- side.title %></h4>
-            <h5><%- side.description %></h5>
+            <p><%- side.description %></p>
             <a href="<%- side.link %>"><%- side.link %></a>
         </section>
     <% }) %>
 </article>
 
+<article>
+    <h3>Social links</h3>
+    <% data.socialLinks.forEach(link => { %>
+        <section>
+            <h4><%- link.linktype %></h4>
+            <a href="<%- link.link %>"><%- link.link %></a>
+        </section>
+    <% }) %>
+</article>
 
 
 

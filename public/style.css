@@ -1,13 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* light mode  & dark mode */
+:root{
+    --body-background: #FAF3DD;
+    --header-border-bottom: #68B0AB;
+    --iO-logo-green:#4A7C59;
+    --text-color: black;
+}
+@media (prefers-color-scheme:dark){
+    :root{
+        --body-background: #040F16;
+        --header-border-bottom: #0094C6;
+        --iO-logo-green:#6FA27D;
+        --text-color: #FAF3DD;
+    }
+}
+
 html{
     font-family: 'Questrial', sans-serif;
+    color: var(--text-color)
 }
 body{
-    background-color: #FAF3DD;
+    background-color: var(--body-background);
     margin-left: 1rem;
     margin-right:1rem;
 }
+
+/* onderstaande codes checken of flexbox kan worden gebruikt of niet */
 .flexbox-svg-container{
     float:right;
 }
@@ -26,11 +45,12 @@ body{
         margin-top:0;
     }
 }
-  
 
+.svg-circle{
+    fill: var(--body-background);
+}
 
 /* skills animation (alleen zichtbaar bij js-enabled) */
-
 .skills-animation{
     display:none;
 }
@@ -47,12 +67,15 @@ article > h3{
 
 
 /* code hieronder is nog niet noodzakelijk */
-/* article p{
+article p{
     overflow-wrap: break-word;
 }
 @supports (text-wrap:balance) {
     article p{
         text-wrap: balance;
     }
-} */
+}
 
+footer{
+    margin-bottom: 5rem;
+}
