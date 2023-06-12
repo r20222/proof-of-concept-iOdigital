@@ -35,6 +35,7 @@ Ik heb gebruik gemaakt van:
 * .toLocaleString()
 * .getFullYear()
 * @media (prefers-color-scheme:dark)
+* details/summary (in en uitklap)
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
