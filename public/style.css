@@ -39,7 +39,7 @@ body{
     margin-top:1rem;
 }
 /* skills animation (alleen zichtbaar bij js-enabled en display flex) */
-.skills-animation, .skills-animation.js-enabled, .skills-animation-container{
+.skills-animation, .skills-animation-container{
     display:none;
 }
 @supports (display: flex) {
@@ -59,15 +59,20 @@ body{
         height:3rem;
         overflow:hidden;
     }
-    .skills-animation.js-enabled{
+    .skills-animation{
         display:flex;
         list-style: none;
-        animation: skills 20s linear infinite;
+        animation: skills 30s linear infinite;
         padding-left: 0px;
     }
-    .skills-animation.js-enabled li{
+    .skills-animation li{
         padding-right:2rem;
         color: var(--body-background)
+    }
+    @media (prefers-reduced-motion) {
+        .skills-animation, .skills-animation-container{
+            display:none;
+        }
     }
 }
 

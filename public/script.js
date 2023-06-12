@@ -1,5 +1,5 @@
-const skillAnimation = document.querySelector('.skills-animation')
+// const skillAnimation = document.querySelector('.skills-animation')
 
 // JavaScript Enabled?
 
-skillAnimation.classList.add('js-enabled')
+// skillAnimation.classList.add('js-enabled')
