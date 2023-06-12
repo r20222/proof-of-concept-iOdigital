@@ -74,6 +74,10 @@ body{
             display:none;
         }
     }
+    summary{
+        display:flex;
+        justify-content: space-between;
+    }
 }
 
 @keyframes skills{
@@ -97,7 +101,6 @@ body{
     margin-top:-1rem;
 }
 summary{
-    display: block;
     font-size: 1.17em;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -108,7 +111,12 @@ summary{
     border-bottom: 2px solid #68B0AB;
     width:50%;
 }
-
+details[open] summary::after{
+    content: "▲";
+}
+details summary::after{
+    content: "▼";
+}
 details:hover summary{
     color: var(--summary-hover-color);
     cursor: pointer;
@@ -116,7 +124,7 @@ details:hover summary{
 
 summary::marker {
     content: "";
-  }
+}
 
 
 /* code hieronder is nog niet noodzakelijk */
