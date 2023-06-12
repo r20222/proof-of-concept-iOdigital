@@ -3,22 +3,13 @@
 <h1 class="name"><%- data.name %></h1>
 <h2><%- data.personalia.role %></h2>
 
-<ul class="skills-animation">
-    <li>Angular</li>
-    <li>TypeScript</li>
-    <li>JavaScript</li>
-    <li>Scrum</li>
-    <li>Cypress</li>
-    <li>GraphQL</li>
-    <li>Agile</li>
-    <li>Jest</li>
-    <li>JQuery</li>
-    <li>AngularJS</li>
-    <li>Ember</li>
-    <li>Laravel</li>
-    <li>SVN</li>
-    <li>SAFe</li>
-</ul>
+<div class="skills-animation-container">
+    <ul class="skills-animation">
+        <% data.skills.forEach(skill => { %>
+            <li><%= skill.label %></li>
+        <% }); %>
+    </ul>
+</div>
 
 <details open>
     <summary>Introduction</summary>
