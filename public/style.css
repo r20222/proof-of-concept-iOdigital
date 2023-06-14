@@ -33,55 +33,43 @@ body{
 p{
     line-height: 1.4rem;;
 }
-/* onderstaande codes checken of flexbox kan worden gebruikt of niet */
+
 .flexbox-svg-container{
-    float:right;
+    display:flex;
+    justify-content: end;
+    float:none;
 }
 .name{
-    clear:right;
-    margin-top:1rem;
+    clear:none;
+    margin-top:0;
 }
-/* skills animation (alleen zichtbaar bij js-enabled en display flex) */
-.skills-animation, .skills-animation-container{
-    display:none;
+.skills-animation-container{
+    display:block;
+    background-color: var(--animation-container-color);
+    width:100%;
+    height:3rem;
+    overflow:hidden;
 }
-@supports (display: flex) {
-    .flexbox-svg-container{
-        display:flex;
-        justify-content: end;
-        float:none;
-    }
-    .name{
-        clear:none;
-        margin-top:0;
-    }
-    .skills-animation-container{
-        display:block;
-        background-color: var(--animation-container-color);
-        width:100%;
-        height:3rem;
-        overflow:hidden;
-    }
-    .skills-animation{
-        display:flex;
-        list-style: none;
-        animation: skills 30s linear infinite;
-        padding-left: 0px;
-    }
-    .skills-animation li{
-        padding-right:2rem;
-        color: var(--body-background)
-    }
-    @media (prefers-reduced-motion) {
-        .skills-animation, .skills-animation-container{
-            display:none;
-        }
-    }
-    summary{
-        display:flex;
-        justify-content: space-between;
+.skills-animation{
+    display:flex;
+    list-style: none;
+    animation: skills 30s linear infinite;
+    padding-left: 0px;
+}
+.skills-animation li{
+    padding-right:2rem;
+    color: var(--body-background)
+}
+@media (prefers-reduced-motion) {
+    .skills-animation, .skills-animation-container{
+        display:none;
     }
 }
+summary{
+    display:flex;
+    justify-content: space-between;
+}
+
 
 @keyframes skills{
     0%{

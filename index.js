@@ -1,6 +1,6 @@
 console.log('mooi')
 
-
+// import json from 'beau-ter-ham.json'
 import express from 'express'
 
 // onderstaande code is om require te kunnen gebruiken
