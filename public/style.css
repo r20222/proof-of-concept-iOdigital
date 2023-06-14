@@ -133,3 +133,33 @@ article p{
 footer{
     margin-bottom: 5rem;
 }
+
+/* mediaqueries */
+
+@media screen and (min-width: 63em){
+    .flexbox-desktop{
+        display:flex;
+        justify-content: center;
+    }
+    main{
+        max-width: 63em;
+    }
+
+    /* banner animatie */
+    @keyframes skills{
+        0%{
+            transform:translateX(63em)
+        }
+        100%{
+            transform:translateX(-80em)
+        }
+    }
+
+    summary{
+        border-bottom: 2px solid #68B0AB;
+        max-width: 35em;
+    }
+    p{
+        max-width: 35em;
+    }
+}

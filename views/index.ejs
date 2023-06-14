@@ -1,171 +1,199 @@
 <%- include('./partials/head.ejs') %>
 
-<h1 class="name"><%- data.name %></h1>
-<h2><%- data.personalia.role %></h2>
+    <div class="flexbox-desktop">
+        <main>
 
-<div class="skills-animation-container">
-    <ul class="skills-animation">
-        <% data.skills.forEach(skill => { %>
-            <li><%= skill.label %></li>
-        <% }); %>
-    </ul>
-</div>
+            <h1 class="name"><%- data.name %></h1>
+            <h2><%- data.personalia.role %></h2>
 
-<details open>
-    <summary>Introduction</summary>
-    <p>
-        <%- data.introduction %>
-    </p>
-</details>
+            <div class="skills-animation-container">
+                <ul class="skills-animation">
+                    <% data.skills.forEach(skill=> { %>
+                        <li>
+                            <%= skill.label %>
+                        </li>
+                        <% }); %>
+                </ul>
+            </div>
 
-<details>
-    <summary>Motivation</summary>
-    <p>
-       <%- data.motivation %>
-    </p>
-</details>
+            <details open>
+                <summary>Introduction</summary>
+                <p>
+                    <%- data.introduction %>
+                </p>
+            </details>
 
-<details>
-    <summary>Skills</summary>
-    <ul>
-        <% data.skills.forEach(skill => { %>
-            <li><%= skill.label %></li>
-        <% }); %>
-        
-    </ul>
-</details>
+            <details>
+                <summary>Motivation</summary>
+                <p>
+                    <%- data.motivation %>
+                </p>
+            </details>
 
+            <details>
+                <summary>Skills</summary>
+                <ul>
+                    <% data.skills.forEach(skill=> { %>
+                        <li>
+                            <%= skill.label %>
+                        </li>
+                        <% }); %>
 
-
-
-
-<details>
-    <summary>Projects via iO</summary>
-    <% data.projects.forEach(project => { %>
-
-        <!-- Chatgpt heeft mij geholpen de data correct op te halen, het gaat om een unix-tijdstempel -->
-        <!-- Hieronder maak ik een variabel van de nummers die in de json staan (timestamp) -->
-        <!-- vervolgens gebruik je new Date om de timestamp met 1000 te vermenigvuldigen -->
-        <!-- dat doe je omdat je het aantal miliseconden wilt achterhalen omdat js daarmee werkt  -->
-        <!-- in de json wordt het namenlijk in seconden weergegeven -->
-        <!-- toDateString() kan verolgens worden gebruikt om de juiste datum weer te geven zonder tijd erbij -->
-        <!-- Omdat ik alleen de maand en jaar wilde weergeven, gebruik ik de onderstaande code ipv toDateString() -->
-        <% const timestamp = project.startDate %>
-        <% const date = new Date(timestamp * 1000); %>
-
-        <section>
-            <h4><%- project.role %> at <%- project.company %></h4>
-            <h5 class="group-together"><%= date.toLocaleString('en-US', { month: 'long' }) %> <%= date.getFullYear() %> - present</h5>
-            <p>
-                <%- project.description %>
-            </p>
-            <ul>
-                <% project.stackAndTechniques.forEach(technique => { %>
-                    <li><%= technique.name %></li>
-                <% }) %>
-            </ul>
-        </section>
-    <% }); %>
-    </details>
-
-<details>
-    <summary>Work experience</summary>
-    <% data.experience.forEach(experience => { %>
-
-        <!-- Voor de startdata -->
-        <% const timestamp = experience.startDate %>
-        <% const date = new Date(timestamp * 1000); %>
-
-        <!-- Voor de einddata -->
-        <% const endTimestamp = experience.endDate %>
-        <% const endDate = new Date(endTimestamp * 1000); %>
-
-        <section>
-            <h4><%- experience.role %> at <%- experience.company %></h4>
-            <h5 class="group-together"><%= date.toLocaleString('en-US', { month: 'long' }) %> <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', { month: 'long' }) %> <%= endDate.getFullYear() %></h5>
-            <p>
-                <%- experience.description %>
-            </p>
-            <ul>
-                <% experience.stackAndTechniques.forEach(technique => { %>
-                    <li><%= technique.name %></li>
-                <% }) %>
-            </ul>
-        </section>
-    <% }) %>
-    </details>
-
-<details>
-    <summary>Education</summary>
-    <% data.education.forEach(edu => { %>
-
-        <!-- Voor de startdata -->
-        <% const timestamp = edu.startDate %>
-        <% const date = new Date(timestamp * 1000); %>
-
-        <!-- Voor de einddata -->
-        <% const endTimestamp = edu.endDate %>
-        <% const endDate = new Date(endTimestamp * 1000); %>
-
-        <section>
-            <h4><%- edu.name %></h4>
-            <h5 class="group-together"><%- edu.institute %></h5>
-            <h6 class="group-together"><%= date.toLocaleString('en-US', { month: 'long' }) %> <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', { month: 'long' }) %> <%= endDate.getFullYear() %></h6>
-        </section>
-    <% }) %>
-    </details>
-
-<details>
-    <summary>Languages</summary>
-    <% data.languages.forEach(lang => { %>
-        <section>
-            <% if (lang.language && lang.proficiency) { %>
-                <section>
-                    <h4><%- lang.language.name %></h4>
-                    <h5 class="group-together"><%- lang.proficiency.name %></h5>
-                </section>
-            <% } %>
-           
-        </section>
-    <% }) %>
-</details>
-
-<details>
-    <summary>Publications</summary>
-    <% data.publications.forEach(pub => { %>
-        <section>
-            <h4><%- pub.title %></h4>
-            <p><%- pub.description %></p>
-            <a href="<%- pub.link %>"><%- pub.link %></a>
-        </section>
-    <% }) %>
-</details>
-
-<details>
-    <summary>Side projects</summary>
-    <% data.sideProjects.forEach(side => { %>
-        <section>
-            <h4><%- side.title %></h4>
-            <p><%- side.description %></p>
-            <a href="<%- side.link %>"><%- side.link %></a>
-        </section>
-    <% }) %>
-</details>
-
-<details>
-    <summary>Social links</summary>
-    <% data.socialLinks.forEach(link => { %>
-        <section>
-            <h4><%- link.linktype %></h4>
-            <a href="<%- link.link %>"><%- link.link %></a>
-        </section>
-    <% }) %>
-</details>
+                </ul>
+            </details>
 
 
 
 
 
+            <details>
+                <summary>Projects via iO</summary>
+                <% data.projects.forEach(project=> { %>
+
+                    <!-- Chatgpt heeft mij geholpen de data correct op te halen, het gaat om een unix-tijdstempel -->
+                    <!-- Hieronder maak ik een variabel van de nummers die in de json staan (timestamp) -->
+                    <!-- vervolgens gebruik je new Date om de timestamp met 1000 te vermenigvuldigen -->
+                    <!-- dat doe je omdat je het aantal miliseconden wilt achterhalen omdat js daarmee werkt  -->
+                    <!-- in de json wordt het namenlijk in seconden weergegeven -->
+                    <!-- toDateString() kan verolgens worden gebruikt om de juiste datum weer te geven zonder tijd erbij -->
+                    <!-- Omdat ik alleen de maand en jaar wilde weergeven, gebruik ik de onderstaande code ipv toDateString() -->
+                    <% const timestamp=project.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <section>
+                                <h4><%- project.role %> at <%- project.company %></h4>
+                                <h5 class="group-together">
+                                    <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                        <%= date.getFullYear() %> - present
+                                </h5>
+                                <p>
+                                    <%- project.description %>
+                                </p>
+                                <ul>
+                                    <% project.stackAndTechniques.forEach(technique=> { %>
+                                        <li>
+                                            <%= technique.name %>
+                                        </li>
+                                        <% }) %>
+                                </ul>
+                            </section>
+                            <% }); %>
+            </details>
+
+            <details>
+                <summary>Work experience</summary>
+                <% data.experience.forEach(experience=> { %>
+
+                    <!-- Voor de startdata -->
+                    <% const timestamp=experience.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <!-- Voor de einddata -->
+                            <% const endTimestamp=experience.endDate %>
+                                <% const endDate=new Date(endTimestamp * 1000); %>
+
+                                    <section>
+                                        <h4><%- experience.role %> at <%- experience.company %></h4>
+                                        <h5 class="group-together">
+                                            <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                                <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', {
+                                                        month: 'long' }) %>
+                                                        <%= endDate.getFullYear() %>
+                                        </h5>
+                                        <p>
+                                            <%- experience.description %>
+                                        </p>
+                                        <ul>
+                                            <% experience.stackAndTechniques.forEach(technique=> { %>
+                                                <li>
+                                                    <%= technique.name %>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </section>
+                                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Education</summary>
+                <% data.education.forEach(edu=> { %>
+
+                    <!-- Voor de startdata -->
+                    <% const timestamp=edu.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <!-- Voor de einddata -->
+                            <% const endTimestamp=edu.endDate %>
+                                <% const endDate=new Date(endTimestamp * 1000); %>
+
+                                    <section>
+                                        <h4><%- edu.name %></h4>
+                                        <h5 class="group-together"><%- edu.institute %></h5>
+                                        <h6 class="group-together">
+                                            <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                                <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', {
+                                                        month: 'long' }) %>
+                                                        <%= endDate.getFullYear() %>
+                                        </h6>
+                                    </section>
+                                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Languages</summary>
+                <% data.languages.forEach(lang=> { %>
+                    <section>
+                        <% if (lang.language && lang.proficiency) { %>
+                            <section>
+                                <h4><%- lang.language.name %></h4>
+                                <h5 class="group-together"><%- lang.proficiency.name %></h5>
+                            </section>
+                            <% } %>
+
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Publications</summary>
+                <% data.publications.forEach(pub=> { %>
+                    <section>
+                        <h4><%- pub.title %></h4>
+                        <p><%- pub.description %></p>
+                        <a href="<%- pub.link %>"><%- pub.link %></a>
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Side projects</summary>
+                <% data.sideProjects.forEach(side=> { %>
+                    <section>
+                        <h4><%- side.title %></h4>
+                        <p><%- side.description %></p>
+                        <a href="<%- side.link %>"><%- side.link %></a>
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Social links</summary>
+                <% data.socialLinks.forEach(link=> { %>
+                    <section>
+                        <h4><%- link.linktype %></h4>
+                        <a href="<%- link.link %>"><%- link.link %></a>
+                    </section>
+                    <% }) %>
+            </details>
+
+        </main>
+    </div>
+
+
+    <!-- <video width="960" height="540" controls>
+        <source src="/views/video-loop-o-2.mp4" type="video/mp4">
+        Je browser ondersteunt geen HTML5-video.
+    </video> -->
 
 
 
@@ -174,5 +202,4 @@
 
 
 
-
-<%- include('./partials/foot.ejs') %>
+    <%- include('./partials/foot.ejs') %>

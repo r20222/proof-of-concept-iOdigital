@@ -26,11 +26,16 @@ app.use(express.static('public'))
 
 app.get('/', (request, response) => {
     // Read the JSON file
-    console.log("bliep")
-    console.log(data);
+    // console.log("bliep")
+    // console.log(data);
+    const videoPath = '/views/video-loop-o-2.mp4';
+
       response.render('index', { data: data});
-  
+    // Stuur de video als respons naar de browser
+    // response.sendFile('index', videoPath);
   })
+
+
 
 // Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
