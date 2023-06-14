@@ -30,6 +30,9 @@ body{
     margin-right:1rem;
 }
 
+p{
+    line-height: 1.4rem;;
+}
 /* onderstaande codes checken of flexbox kan worden gebruikt of niet */
 .flexbox-svg-container{
     float:right;
@@ -109,7 +112,7 @@ summary{
     font-weight: bold;
 
     border-bottom: 2px solid #68B0AB;
-    width:50%;
+    width:100%;
 }
 
 /* onderstaande icons hiervandaan: https://www.symbolcopy.com/triangle-symbols.html */
