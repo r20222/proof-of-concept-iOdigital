@@ -32,7 +32,7 @@ body{
     margin-left: 1rem;
     margin-right:1rem;
 }
-.background-buttons{
+.background-buttons, .hire-button{
     display:none;
 }
 p{
@@ -208,7 +208,39 @@ footer{
         border-radius: 1rem;
         max-width: 8rem;
     }
-   
+    input{
+        cursor: pointer;
+    }
+    .hire-button{
+        display:block;
+        position:absolute;
+        right:1rem;
+        height:216.6px;
+        width:144px;
+        border-radius:1rem;
+        /* z-index:1000; */
+        border:none;
+        background-color:var(--body-background);
+        font-size:3rem;
+        color: var(--text-color);
+    }
+    .hire-button{
+        cursor:pointer;
+    }
+    .hire-lottie{
+        position:absolute;
+        top:0rem;
+        left:0rem;
+    }
+    /* .party-party{
+        display: none;
+        position: absolute;
+        top:0rem;
+        width:95%;
+    }
+    .party-party.hire-clicked{
+        display: block;
+    } */
     fieldset{
         display: flex;
         flex-direction: column;

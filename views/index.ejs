@@ -18,6 +18,10 @@
           </fieldset>
         </form> 
 
+        <button class="hire-button">Hire
+            <lottie-player class="hire-lottie" id="lottiePlayer" src="https://assets3.lottiefiles.com/packages/lf20_obhph3sh.json"  background="transparent" speed="1"></lottie-player>
+        </button>
+
         <main>
 
             <h1 class="name"><%- data.name %></h1>
@@ -57,11 +61,8 @@
                             </li>
                             <% }); %>
                     </ul>
-                    <div class="video-container">
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                    <div class="video-container">  
                         <lottie-player class="video1" src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>            
-                    
-                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
                         <lottie-player class="video2" src="https://assets10.lottiefiles.com/packages/lf20_78DCvgGZC7.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
                     </div>    
                 </div>
@@ -213,6 +214,7 @@
         </main>
     </div>
 
+    <!-- <lottie-player id="lottiePlayer2" class="party-party" src="https://assets3.lottiefiles.com/packages/lf20_rovf9gzu.json" background="transparent"  speed="1"></lottie-player> -->
     
     <!-- https://fuzzy-yak-life-jacket.cyclic.app/ -->
     <%- include('./partials/foot.ejs') %>

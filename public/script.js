@@ -55,3 +55,21 @@ radioButtons.forEach((radioButton) => {
       
     })
   });
+
+
+// hire button animatie
+  const lottiePlayer = document.getElementById('lottiePlayer');
+  // const partyParty = document.getElementById('lottiePlayer2');
+
+lottiePlayer.addEventListener('click', () => {
+  // partyParty.classList.add('hire-clicked')
+
+  lottiePlayer.play();
+  // partyParty.play()
+});
+
+// setTimeout(() => {
+//   partyParty.classList.remove('hire-clicked');
+// }, 3000);
+
+
