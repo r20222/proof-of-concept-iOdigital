@@ -4,19 +4,22 @@
 :root{
     --body-background: #FAF3DD;
     --header-border-bottom: #68B0AB;
-    --iO-logo-green:#4A7C59;
+    --iO-logo: #1D1D1B;
     --text-color: black;
     --summary-hover-color:#4A7C59;
     --animation-container-color:#040F16;
+    --logo-filter: drop-shadow(0px 0px 16px rgba(255, 255, 255, 1));
+    --yellowish-color: #FFE74C;
 }
 @media (prefers-color-scheme:dark){
     :root{
         --body-background: #040F16;
         --header-border-bottom: #0094C6;
-        --iO-logo-green:#6FA27D;
+        --iO-logo:#FFFFFF;
         --text-color: #FAF3DD;
         --summary-hover-color:#C8D5B9;
         --animation-container-color:#FAF3DD;
+        --logo-filter: drop-shadow(0px 0px 16px rgba(0, 0, 0, 1));
     }
 }
 
@@ -29,7 +32,9 @@ body{
     margin-left: 1rem;
     margin-right:1rem;
 }
-
+.background-buttons{
+    display:none;
+}
 p{
     line-height: 1.4rem;;
 }
@@ -37,18 +42,21 @@ p{
 .flexbox-svg-container{
     display:flex;
     justify-content: end;
-    float:none;
+    fill: var(--iO-logo);
+    filter: var(--logo-filter);
+}
+.flexbox-svg-container svg{
+    width:4rem;
 }
 .name{
-    clear:none;
     margin-top:0;
 }
 .skills-animation-container{
-    display:block;
     background-color: var(--animation-container-color);
     width:100%;
     height:3rem;
     overflow:hidden;
+    border-radius: 1rem;
 }
 .skills-animation{
     display:flex;
@@ -64,12 +72,14 @@ p{
     .skills-animation, .skills-animation-container{
         display:none;
     }
+    .video-container{
+        display:none;
+    }
 }
 summary{
     display:flex;
     justify-content: space-between;
 }
-
 
 @keyframes skills{
     0%{
@@ -79,12 +89,6 @@ summary{
         transform:translateX(-380%)
     }
 }
-
-.svg-circle{
-    fill: var(--body-background);
-}
-
-
 
 
 /* met onderstaande code wordt het overzichtelijker */
@@ -111,7 +115,7 @@ details summary::after{
     content: "▼";
 }
 details:hover summary{
-    color: var(--summary-hover-color);
+    /* color: var(--summary-hover-color); */
     cursor: pointer;
 }
 
@@ -130,6 +134,34 @@ article p{
     }
 }
 
+/* skills layout */
+.skills-grid-container{
+    list-style: none;
+    padding-left:0rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 10px;
+}
+.skills-grid-container li{
+    padding:1rem 1rem 1rem 1rem;
+    background-color: var(--yellowish-color);
+    border-radius: 1rem;
+    color:black;
+    display:flex;
+    justify-content: center;
+}
+
+/* socials links */
+.socials{
+    display:flex;
+    flex-direction: row;
+}
+.social-links{
+    color: var(--yellowish-color);
+    font-size: 5rem;
+    max-width:fit-content;
+}
+
 footer{
     margin-bottom: 5rem;
 }
@@ -139,11 +171,69 @@ footer{
 @media screen and (min-width: 63em){
     .flexbox-desktop{
         display:flex;
-        justify-content: center;
+        justify-content: start;
+    }
+    /* background source: https://www.svgshapes.in/, https://svgwave.in/ */
+    body{
+        background: url('/asset.svg');
+        background-color:rgba(4, 15, 22, .8) ;
+        background-size: 10%;
+        /* animation: moving-background 340s linear infinite; */
+    }
+
+    /* namen nog aanpassen zodat het klopt */
+    body.green{
+        background: url('/background2.svg');
+    }
+    body.blue{
+        background-color:oklch(78.94% 0.083 231.25);
+        background: url('/background3.svg');
+        background-repeat:no-repeat;
+        /* background-size: 200%; */
+        /* background-size: 100% 200%; */
+    }
+    /* @keyframes moving-background{
+        50%{
+          background-position-x: 50%;
+          background-position-y: 50%;
+        }
+    } */
+    .background-buttons.js-enabled{
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        position:absolute;
+        background-color: var(--body-background);
+        padding:.5rem;
+        border-radius: 1rem;
+        max-width: 8rem;
+    }
+   
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        border:none;
+        max-width:max-content;
+    }
+    
+    input[type='radio']{
+        width:3rem;
+        height:3rem;
+    }
+    .flexbox-svg-container svg{
+        width:9rem;
     }
     main{
-        max-width: 63em;
+        max-width: 60%;
+        background-color: var(--body-background);
+        padding:2.5rem;
+        border-radius: 1rem;
+        margin:auto;
+        position: relative;
+        top:-7rem;
     }
+
 
     /* banner animatie */
     @keyframes skills{
@@ -157,9 +247,41 @@ footer{
 
     summary{
         border-bottom: 2px solid #68B0AB;
-        max-width: 35em;
+        /* max-width: 35em; */
     }
     p{
         max-width: 35em;
+    }
+
+        /* skills layout */
+    .skills-grid-container{
+        list-style: none;
+        padding-left:0rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-gap: 10px;
+        max-width: 35em;
+    }
+    .skills-grid-container li{
+        padding:1rem 1rem 1rem 1rem;
+        background-color: var(--yellowish-color);
+        border-radius: 1rem;
+        color:black;
+        display:flex;
+        justify-content: center;
+    }
+    .skills-grid-container li:hover{
+        cursor: pointer;
+    }
+    
+    .video1, .video2{
+        position:absolute;
+        visibility: hidden;
+    }
+    .video1.skill-clicked, .video2.skill-clicked{
+        visibility: visible;
+    }
+    .skills-flex-container{
+        display:flex;
     }
 }

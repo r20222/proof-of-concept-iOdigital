@@ -1,6 +1,23 @@
 <%- include('./partials/head.ejs') %>
 
     <div class="flexbox-desktop">
+        <!-- onderstaande code voor verschillende achtergronden -->
+        <form action="" method="" class="background-buttons">
+            <fieldset>
+                <legend>Background picker</legend>
+
+                
+                <input type="radio" name="background" value="red" id="colour_red" checked>
+                <label for="colour_red"></label>
+    
+                <input type="radio" name="background" value="green" id="colour_green">
+                <label for="colour_green"></label>
+        
+                <input type="radio" name="background" value="blue" id="colour_blue">
+                <label for="colour_blue"></label>
+          </fieldset>
+        </form> 
+
         <main>
 
             <h1 class="name"><%- data.name %></h1>
@@ -17,14 +34,14 @@
             </div>
 
             <details open>
-                <summary>Introduction</summary>
+                <summary class="typewriter">Introduction</summary>
                 <p>
                     <%- data.introduction %>
                 </p>
             </details>
 
             <details>
-                <summary>Motivation</summary>
+                <summary class="typewriter">Motivation</summary>
                 <p>
                     <%- data.motivation %>
                 </p>
@@ -32,14 +49,22 @@
 
             <details>
                 <summary>Skills</summary>
-                <ul>
-                    <% data.skills.forEach(skill=> { %>
-                        <li>
-                            <%= skill.label %>
-                        </li>
-                        <% }); %>
-
-                </ul>
+                <div class="skills-flex-container">
+                    <ul class="skills-grid-container">
+                        <% data.skills.forEach(skill=> { %>
+                            <li>
+                                <%= skill.label %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                    <div class="video-container">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player class="video1" src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>            
+                    
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player class="video2" src="https://assets10.lottiefiles.com/packages/lf20_78DCvgGZC7.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+                    </div>    
+                </div>
             </details>
 
 
@@ -178,28 +203,16 @@
 
             <details>
                 <summary>Social links</summary>
-                <% data.socialLinks.forEach(link=> { %>
-                    <section>
-                        <h4><%- link.linktype %></h4>
-                        <a href="<%- link.link %>"><%- link.link %></a>
-                    </section>
-                    <% }) %>
+                <section class="socials"></section>
+                <% data.socialLinks.forEach(link => { %>
+                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i class="bx bxl-<%= link.linkType %>"></i></a>  
+                <% }) %>
+                </section>
             </details>
 
         </main>
     </div>
 
-
-    <!-- <video width="960" height="540" controls>
-        <source src="/views/video-loop-o-2.mp4" type="video/mp4">
-        Je browser ondersteunt geen HTML5-video.
-    </video> -->
-
-
-
-
-
-
-
-
+    
+    <!-- https://fuzzy-yak-life-jacket.cyclic.app/ -->
     <%- include('./partials/foot.ejs') %>

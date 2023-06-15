@@ -19,6 +19,10 @@ const jsonData = fs.readFileSync('beau-ter-ham.json');
 const data = JSON.parse(jsonData);
 
 
+// test video
+// const video = fs.readFileSync('computer-lottie.json');
+// const videoData = video;
+
 // Stel in hoe we express gebruiken
 app.set('view engine', 'ejs')
 app.set('views', './views')
@@ -28,11 +32,10 @@ app.get('/', (request, response) => {
     // Read the JSON file
     // console.log("bliep")
     // console.log(data);
-    const videoPath = '/views/video-loop-o-2.mp4';
+
 
       response.render('index', { data: data});
-    // Stuur de video als respons naar de browser
-    // response.sendFile('index', videoPath);
+
   })
 
 
