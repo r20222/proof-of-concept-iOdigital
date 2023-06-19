@@ -169,6 +169,7 @@ article p{
     display:flex;
     justify-content: center;
 }
+
 .techniques-container{
     list-style: none;
     padding-left:0rem;
@@ -426,6 +427,14 @@ footer{
         max-width: 55em;
         margin-top: 2rem;
     }
+
+    /* simplified version */
+.display-none{
+    display:none;
+}
+.display-block{
+    display:block;
+}
 }
 
 @media (prefers-reduced-motion) {
