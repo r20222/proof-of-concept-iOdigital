@@ -207,7 +207,9 @@ article p{
 
 .link{
     color:var(--header-border-bottom);
-    text-decoration: underline #DECC70;
+}
+.link:hover{
+    text-decoration: underline var(--pink-color);
 }
 
 footer{
@@ -369,6 +371,19 @@ footer{
         position: relative;
         top:-7rem;
     }
+
+    main.compare-clicked{
+        display:flex;
+        gap:1rem;
+        /* background-color: green; */
+    }
+
+    /* .first-resume, .second-resume{
+        width:50%;
+        
+    } */
+    
+  
 
 
     /* banner animatie */

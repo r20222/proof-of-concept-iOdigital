@@ -9,6 +9,11 @@ const skillsRefined = document.querySelector('.skills-refined')
 const refinedIntro = document.querySelector('.refined-intro')
 const refinedExperience = document.querySelector('.refined-experience')
 const introduction = document.querySelector('.introduction')
+const compareButton = document.querySelector('.compare-cv')
+const main = document.querySelector('main')
+const resumeOne = document.querySelector('.first-resume')
+const resumeTwo = document.querySelector('.second-resume')
+
 
 const skillsArray = Array.from(skillsEven);
 const skillsArray2 = Array.from(skillsOdd);
@@ -92,15 +97,22 @@ simplifyButton.addEventListener('click', () => {
 
 // skills animation continuous test
 
-const ulElements = skillAnimationsBanner.querySelectorAll('ul');
+// const ulElements = skillAnimationsBanner.querySelectorAll('ul');
 
-  // Bereken de totale breedte van de ul-elementen
-  let totalWidth = 0;
-  ulElements.forEach((ul) => {
-    totalWidth = ul.offsetWidth;
-  });
+//   // Bereken de totale breedte van de ul-elementen
+//   let totalWidth = 0;
+//   ulElements.forEach((ul) => {
+//     totalWidth = ul.offsetWidth;
+//   });
 
   // Pas de breedte van de container aan
 // skillAnimationsBanner.style.width = `${totalWidth}px`;
 
 console.log(`${totalWidth}px`)
+
+// compare button
+
+compareButton.addEventListener('click', () => {
+  main.classList.toggle('compare-clicked')
+  resumeOne.classList.toggle('display-block')
+});
