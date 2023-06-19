@@ -37,6 +37,8 @@ Ik heb gebruik gemaakt van:
 * @media (prefers-color-scheme:dark)
 * details/summary (in en uitklap)
 * @media (prefers-reduced-motion)
+* popover
+* scrollbar-gutter: stable;
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
