@@ -8,6 +8,7 @@ const details = document.querySelectorAll('details')
 const skillsRefined = document.querySelector('.skills-refined')
 const refinedIntro = document.querySelector('.refined-intro')
 const refinedExperience = document.querySelector('.refined-experience')
+const introduction = document.querySelector('.introduction')
 
 const skillsArray = Array.from(skillsEven);
 const skillsArray2 = Array.from(skillsOdd);
@@ -80,7 +81,7 @@ simplifyButton.addEventListener('click', () => {
   skillsRefined.classList.toggle('display-block')
   refinedIntro.classList.toggle('display-block')
   refinedExperience.classList.toggle('display-block')
-
+  introduction.classList.toggle('display-none')
 
     details.forEach(detail => {
       detail.classList.toggle('display-none')
