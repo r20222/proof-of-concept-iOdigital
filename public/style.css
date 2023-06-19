@@ -104,11 +104,14 @@ p{
     }
 }
 
-summary{
-    display:flex;
-    justify-content: space-between;
+.introduction{
+    padding:1rem 0rem 1rem 0rem;
+    margin-top:1rem;
 }
 
+.video-container{
+    display:none;
+}
 
 /* met onderstaande code wordt het overzichtelijker */
 .group-together{
@@ -124,6 +127,8 @@ summary{
 
     border-bottom: 2px solid #68B0AB;
     width:100%;
+    display:flex;
+    justify-content: space-between;
 }
 
 /* onderstaande icons hiervandaan: https://www.symbolcopy.com/triangle-symbols.html */
@@ -405,6 +410,9 @@ footer{
         cursor: pointer;
     }
     
+    .video-container{
+        display:block;
+    }
     .video1, .video2{
         position:absolute;
         visibility: hidden;
