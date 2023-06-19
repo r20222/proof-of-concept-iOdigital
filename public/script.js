@@ -2,6 +2,12 @@ const backgroundButtons = document.querySelector('.background-buttons')
 const skillAnimations = document.querySelector('.video-container')
 const skillsEven = document.querySelectorAll('.skills-grid-container li:nth-child(even)');
 const skillsOdd = document.querySelectorAll('.skills-grid-container li:nth-child(odd)');
+const simplifyButton = document.querySelector('.simplify-cv')
+const skillAnimationsBanner = document.querySelector('.skills-animation-container')
+const details = document.querySelectorAll('details')
+const skillsRefined = document.querySelector('.skills-refined')
+const refinedIntro = document.querySelector('.refined-intro')
+const refinedExperience = document.querySelector('.refined-experience')
 
 const skillsArray = Array.from(skillsEven);
 const skillsArray2 = Array.from(skillsOdd);
@@ -13,7 +19,7 @@ const vid2 = document.querySelector('.video2')
 
 backgroundButtons.classList.add('js-enabled')
 skillAnimations.classList.add('js-enabled')
-
+simplifyButton.classList.add('js-enabled')
 
 // verander body background 
 
@@ -59,17 +65,41 @@ radioButtons.forEach((radioButton) => {
 
 // hire button animatie
   const lottiePlayer = document.getElementById('lottiePlayer');
-  // const partyParty = document.getElementById('lottiePlayer2');
 
 lottiePlayer.addEventListener('click', () => {
-  // partyParty.classList.add('hire-clicked')
-
   lottiePlayer.play();
-  // partyParty.play()
 });
 
-// setTimeout(() => {
-//   partyParty.classList.remove('hire-clicked');
-// }, 3000);
 
 
+// simplify button pressed
+
+simplifyButton.addEventListener('click', () => {
+
+  skillAnimationsBanner.classList.toggle('display-none')
+  skillsRefined.classList.toggle('display-block')
+  refinedIntro.classList.toggle('display-block')
+  refinedExperience.classList.toggle('display-block')
+
+
+    details.forEach(detail => {
+      detail.classList.toggle('display-none')
+    })
+    
+});
+
+
+// skills animation continuous test
+
+const ulElements = skillAnimationsBanner.querySelectorAll('ul');
+
+  // Bereken de totale breedte van de ul-elementen
+  let totalWidth = 0;
+  ulElements.forEach((ul) => {
+    totalWidth = ul.offsetWidth;
+  });
+
+  // Pas de breedte van de container aan
+// skillAnimationsBanner.style.width = `${totalWidth}px`;
+
+console.log(`${totalWidth}px`)

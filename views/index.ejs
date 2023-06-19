@@ -18,8 +18,17 @@
           </fieldset>
         </form> 
 
-        <button class="hire-button">Hire
+        <button class="simplify-cv" title="Refine resume">
+            Refine
+            <lottie-player class="simplify-cv-lottie" src="https://assets4.lottiefiles.com/packages/lf20_eux2nl1l.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" hover loop  autoplay></lottie-player>
+        </button>
+
+        <button class="hire-button" title="add to favorites">⭐ Favorite
             <lottie-player class="hire-lottie" id="lottiePlayer" src="https://assets3.lottiefiles.com/packages/lf20_obhph3sh.json"  background="transparent" speed="1"></lottie-player>
+        </button>
+        <button class="hire-button compare-cv" title="Compare resume with others">
+            Compare
+            <lottie-player class="compare-cv-lottie" src="https://assets1.lottiefiles.com/packages/lf20_0yfsb3a1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;" hover loop  autoplay></lottie-player>
         </button>
 
         <main>
@@ -27,25 +36,74 @@
             <h1 class="name"><%- data.name %></h1>
             <h2><%- data.personalia.role %></h2>
 
+            <!-- social links -->
+            <section class="socials"></section>
+                <% data.socialLinks.forEach(link => { %>
+                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i class="bx bxl-<%= link.linkType %>"></i></a>  
+                <% }) %>
+            </section>
+
+        <!-- profiel foto -->
+            <button class="profile-popover" popovertarget="my-popover">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg" alt="profile image" title="profiel foto" class="profile-picture">
+            </button>
+
+                <div id="my-popover" popover>
+                    <figure>
+                        <img class="profile-popover-img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg" alt="profile image" title="profiel foto" >
+                    </figure>
+                </div>
+
+                <!-- refined skills -->
+                <section class="skills-refined skills-flex-container display-none"> 
+                    <ul class="skills-grid-container-refined">
+                        <% data.skills.forEach(skill=> { %>
+                            <li>
+                                <%= skill.label %>
+                            </li>
+                            <% }); %>     
+                    </ul>
+                 </section>
+                 <section class="refined-intro display-none">
+                    <p>A real expert when it comes to component libraries & Design Systems 
+                        having built multiple large scaling systems.</p>
+                 </section>
+                 <section class="refined-experience display-none">
+                    <ul>
+                        <li>10+ years of JavaScript experience</li>
+                        <li>4 years of web component experience</li>
+                        <li>WCAG aproved components at RaboBank</li>
+                        <li>Vattenfall, Rabobank, ONVZ zorgverzekeraar</li>
+                    </ul>
+                 </section>
+
+            <!-- Kan hier beter het html marquee element voor gebruiken -->
             <div class="skills-animation-container">
-                <ul class="skills-animation">
+                <ul class="skills-animation skills-animation1">
                     <% data.skills.forEach(skill=> { %>
                         <li>
                             <%= skill.label %>
                         </li>
-                        <% }); %>
-                </ul>
+                        <% }); %>  
+                </ul> 
+                <ul class="skills-animation skills-animation2">
+                    <% data.skills.forEach(skill => { %>
+                        <li>
+                        <%= skill.label %>
+                        </li>
+                    <% }); %>
+                </ul> 
             </div>
 
-            <details open>
-                <summary class="typewriter">Introduction</summary>
+            <section class="introduction">
+                <h2>Introduction</h2>
                 <p>
                     <%- data.introduction %>
                 </p>
             </details>
 
             <details>
-                <summary class="typewriter">Motivation</summary>
+                <summary>Motivation</summary>
                 <p>
                     <%- data.motivation %>
                 </p>
@@ -95,9 +153,10 @@
                                 <p>
                                     <%- project.description %>
                                 </p>
-                                <ul>
+
+                                <ul class="techniques-container">
                                     <% project.stackAndTechniques.forEach(technique=> { %>
-                                        <li>
+                                        <li class="techniques">
                                             <%= technique.name %>
                                         </li>
                                         <% }) %>
@@ -129,9 +188,9 @@
                                         <p>
                                             <%- experience.description %>
                                         </p>
-                                        <ul>
+                                        <ul class="techniques-container">
                                             <% experience.stackAndTechniques.forEach(technique=> { %>
-                                                <li>
+                                                <li class="techniques">
                                                     <%= technique.name %>
                                                 </li>
                                                 <% }) %>
@@ -186,7 +245,7 @@
                     <section>
                         <h4><%- pub.title %></h4>
                         <p><%- pub.description %></p>
-                        <a href="<%- pub.link %>"><%- pub.link %></a>
+                        <a class="link" href="<%- pub.link %>"><%- pub.link %></a>
                     </section>
                     <% }) %>
             </details>
@@ -197,7 +256,7 @@
                     <section>
                         <h4><%- side.title %></h4>
                         <p><%- side.description %></p>
-                        <a href="<%- side.link %>"><%- side.link %></a>
+                        <a class="link" href="<%- side.link %>"><%- side.link %></a>
                     </section>
                     <% }) %>
             </details>
@@ -212,9 +271,263 @@
             </details>
 
         </main>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- teesttest -->
+
+        <main class="display-none">
+
+            <h1 class="name"><%- data.name %></h1>
+            <h2><%- data.personalia.role %></h2>
+
+            <!-- social links -->
+            <section class="socials"></section>
+                <% data.socialLinks.forEach(link => { %>
+                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i class="bx bxl-<%= link.linkType %>"></i></a>  
+                <% }) %>
+            </section>
+
+        <!-- profiel foto -->
+            <button class="profile-popover" popovertarget="my-popover">
+                <!-- <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_kw2yp643.json"  background="transparent"  speed="1" class="profile-picture"  loop hover autoplay></lottie-player> -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg" alt="profile image" title="profiel foto" class="profile-picture">
+            </button>
+
+                <div id="my-popover" popover>
+                    <figure>
+                        <img class="profile-popover-img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg" alt="profile image" title="profiel foto" >
+                    </figure>
+                </div>
+
+                <!-- refined skills -->
+                <section class="skills-refined skills-flex-container display-none"> 
+                    <ul class="skills-grid-container-refined">
+                        <% data.skills.forEach(skill=> { %>
+                            <li>
+                                <%= skill.label %>
+                            </li>
+                            <% }); %>     
+                    </ul>
+                 </section>
+                 <section class="refined-intro display-none">
+                    <p>A real expert when it comes to component libraries & Design Systems 
+                        having built multiple large scaling systems.</p>
+                 </section>
+                 <section class="refined-experience display-none">
+                    <ul>
+                        <li>10+ years of JavaScript experience</li>
+                        <li>4 years of web component experience</li>
+                        <li>WCAG aproved components at RaboBank</li>
+                        <li>Vattenfall, Rabobank, ONVZ zorgverzekeraar</li>
+                    </ul>
+                 </section>
+
+            <!-- Kan hier beter het html marquee element voor gebruiken -->
+            <div class="skills-animation-container">
+                <ul class="skills-animation skills-animation1">
+                    <% data.skills.forEach(skill=> { %>
+                        <li>
+                            <%= skill.label %>
+                        </li>
+                        <% }); %>  
+                </ul> 
+                <ul class="skills-animation skills-animation2">
+                    <% data.skills.forEach(skill => { %>
+                        <li>
+                        <%= skill.label %>
+                        </li>
+                    <% }); %>
+                </ul> 
+            </div>
+
+            <details open>
+                <summary>Introduction</summary>
+                <p>
+                    <%- data.introduction %>
+                </p>
+            </details>
+
+            <details>
+                <summary>Motivation</summary>
+                <p>
+                    <%- data.motivation %>
+                </p>
+            </details>
+
+            <details>
+                <summary>Skills</summary>
+                <div class="skills-flex-container">
+                    <ul class="skills-grid-container">
+                        <% data.skills.forEach(skill=> { %>
+                            <li>
+                                <%= skill.label %>
+                            </li>
+                            <% }); %>
+                    </ul>
+                    <div class="video-container">  
+                        <lottie-player class="video1" src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>            
+                        <lottie-player class="video2" src="https://assets10.lottiefiles.com/packages/lf20_78DCvgGZC7.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
+                    </div>    
+                </div>
+            </details>
+
+
+
+
+
+            <details>
+                <summary>Projects via iO</summary>
+                <% data.projects.forEach(project=> { %>
+
+                    <!-- Chatgpt heeft mij geholpen de data correct op te halen, het gaat om een unix-tijdstempel -->
+                    <!-- Hieronder maak ik een variabel van de nummers die in de json staan (timestamp) -->
+                    <!-- vervolgens gebruik je new Date om de timestamp met 1000 te vermenigvuldigen -->
+                    <!-- dat doe je omdat je het aantal miliseconden wilt achterhalen omdat js daarmee werkt  -->
+                    <!-- in de json wordt het namenlijk in seconden weergegeven -->
+                    <!-- toDateString() kan verolgens worden gebruikt om de juiste datum weer te geven zonder tijd erbij -->
+                    <!-- Omdat ik alleen de maand en jaar wilde weergeven, gebruik ik de onderstaande code ipv toDateString() -->
+                    <% const timestamp=project.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <section>
+                                <h4><%- project.role %> at <%- project.company %></h4>
+                                <h5 class="group-together">
+                                    <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                        <%= date.getFullYear() %> - present
+                                </h5>
+                                <p>
+                                    <%- project.description %>
+                                </p>
+
+                                <ul class="techniques-container">
+                                    <% project.stackAndTechniques.forEach(technique=> { %>
+                                        <li class="techniques">
+                                            <%= technique.name %>
+                                        </li>
+                                        <% }) %>
+                                </ul>
+                            </section>
+                            <% }); %>
+            </details>
+
+            <details>
+                <summary>Work experience</summary>
+                <% data.experience.forEach(experience=> { %>
+
+                    <!-- Voor de startdata -->
+                    <% const timestamp=experience.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <!-- Voor de einddata -->
+                            <% const endTimestamp=experience.endDate %>
+                                <% const endDate=new Date(endTimestamp * 1000); %>
+
+                                    <section>
+                                        <h4><%- experience.role %> at <%- experience.company %></h4>
+                                        <h5 class="group-together">
+                                            <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                                <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', {
+                                                        month: 'long' }) %>
+                                                        <%= endDate.getFullYear() %>
+                                        </h5>
+                                        <p>
+                                            <%- experience.description %>
+                                        </p>
+                                        <ul class="techniques-container">
+                                            <% experience.stackAndTechniques.forEach(technique=> { %>
+                                                <li class="techniques">
+                                                    <%= technique.name %>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+                                    </section>
+                                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Education</summary>
+                <% data.education.forEach(edu=> { %>
+
+                    <!-- Voor de startdata -->
+                    <% const timestamp=edu.startDate %>
+                        <% const date=new Date(timestamp * 1000); %>
+
+                            <!-- Voor de einddata -->
+                            <% const endTimestamp=edu.endDate %>
+                                <% const endDate=new Date(endTimestamp * 1000); %>
+
+                                    <section>
+                                        <h4><%- edu.name %></h4>
+                                        <h5 class="group-together"><%- edu.institute %></h5>
+                                        <h6 class="group-together">
+                                            <%= date.toLocaleString('en-US', { month: 'long' }) %>
+                                                <%= date.getFullYear() %> - <%= endDate.toLocaleString('en-US', {
+                                                        month: 'long' }) %>
+                                                        <%= endDate.getFullYear() %>
+                                        </h6>
+                                    </section>
+                                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Languages</summary>
+                <% data.languages.forEach(lang=> { %>
+                    <section>
+                        <% if (lang.language && lang.proficiency) { %>
+                            <section>
+                                <h4><%- lang.language.name %></h4>
+                                <h5 class="group-together"><%- lang.proficiency.name %></h5>
+                            </section>
+                            <% } %>
+
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Publications</summary>
+                <% data.publications.forEach(pub=> { %>
+                    <section>
+                        <h4><%- pub.title %></h4>
+                        <p><%- pub.description %></p>
+                        <a class="link" href="<%- pub.link %>"><%- pub.link %></a>
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Side projects</summary>
+                <% data.sideProjects.forEach(side=> { %>
+                    <section>
+                        <h4><%- side.title %></h4>
+                        <p><%- side.description %></p>
+                        <a class="link" href="<%- side.link %>"><%- side.link %></a>
+                    </section>
+                    <% }) %>
+            </details>
+
+            <details>
+                <summary>Social links</summary>
+                <section class="socials"></section>
+                <% data.socialLinks.forEach(link => { %>
+                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i class="bx bxl-<%= link.linkType %>"></i></a>  
+                <% }) %>
+                </section>
+            </details>
+
+        </main>
+
     </div>
 
-    <!-- <lottie-player id="lottiePlayer2" class="party-party" src="https://assets3.lottiefiles.com/packages/lf20_rovf9gzu.json" background="transparent"  speed="1"></lottie-player> -->
-    
     <!-- https://fuzzy-yak-life-jacket.cyclic.app/ -->
     <%- include('./partials/foot.ejs') %>
