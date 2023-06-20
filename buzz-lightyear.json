@@ -1,0 +1,278 @@
+{
+    "experience": [
+      {
+        "role": "Frontend developer",
+        "startDate": 1535798040,
+        "description": "At the European Space Agency (ESA), Buzz played a crucial role in implementing a component-based architecture for frontend code, enabling seamless and automated deployment of new functionalities. This architecture aims to be adopted by all online applications across ESA, including not only the main ESA brand but also its subsidiary labels. As a key member of the core team, Buzz provided support to various feature teams by developing essential components and tools for automated testing and streamlined code releases. Buzz's dedication to building a scalable and efficient frontend framework ensures a standardized and cohesive user experience across ESA's digital platforms. By leveraging their expertise, Buzz contributed to enhancing the efficiency and reliability of ESA's online applications, furthering the agency's mission of advancing space exploration and research.",
+        "company": "ESA",
+        "stackAndTechniques": [
+          {
+            "name": "Angular"
+          },
+          {
+            "name": "Cypress"
+          },
+          {
+            "name": "Jest"
+          }
+        ],
+        "endDate": 1567247640
+      },
+      {
+        "role": "Frontend Developer",
+        "company": "JAXA",
+        "description": "Buzz, a talented frontend developer, played a pivotal role at JAXA, the Japan Aerospace Exploration Agency. Buzz was entrusted with the task of developing a cutting-edge application for visualizing data provided by a groundbreaking product at JAXA. This frontend application was specifically designed to run on a Raspberry Pi, offering real-time insights into the content and transactions of the device. Leveraging their expertise in JavaScript, HTML5, CSS3, and Bootstrap, Buzz successfully developed an AngularJS application that ran seamlessly on the Raspberry Pi through a dedicated web server. This innovative solution not only enhanced operational efficiency but also became a standard component of the product, offering customers a comprehensive software package. Buzz's contributions at JAXA exemplify their dedication to pushing the boundaries of frontend development in the realm of aerospace technology, facilitating advanced data visualization and analysis for the agency's critical missions.",
+        "endDate": 1535711760,
+        "startDate": 1496313360,
+        "stackAndTechniques": [
+          {
+            "name": "JavaScript"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "Bootstrap"
+          },
+          {
+            "name": "TypeScript"
+          },
+          {
+            "name": "Docker"
+          }
+        ]
+      },
+      {
+        "company": "Rethinking live",
+        "stackAndTechniques": [],
+        "endDate": 1493589600,
+        "description": "After a few years of studying, I really needed a break and travelled the world to taste different types of flour. I stayed in France long because they have the best bread in the world.",
+        "startDate": 1441058400,
+        "role": "Sabbatical",
+        "city": "Worldwide"
+      }
+    ],
+    "personalia": {
+      "email": "beau.ter.ham@iodigital.com",
+      "gender": "Male",
+      "lastName": "Lightyear",
+      "city": "Buzztown",
+      "firstName": "Buzz",
+      "phone": {
+        "number": "",
+        "code": ""
+      },
+      "countryCode": "NL",
+      "nationality": ["NL"],
+      "dateOfBirth": 502284660,
+      "role": "Astronaut Frontend Master"
+    },
+    "lastUpdated": 1686036556424,
+    "skills": [
+      {
+        "label": "Angular",
+        "isActive": true,
+        "name": "Angular",
+        "value": "Angular"
+      },
+      {
+        "name": "TypeScript",
+        "label": "TypeScript",
+        "value": "TypeScript",
+        "isActive": true
+      },
+      {
+        "value": "JavaScript",
+        "name": "JavaScript",
+        "label": "JavaScript",
+        "isActive": true
+      },
+      {
+        "isActive": true,
+        "name": "Scrum",
+        "label": "Scrum",
+        "value": "Scrum"
+      },
+      {
+        "value": "Cypress",
+        "isActive": true,
+        "name": "Cypress",
+        "label": "Cypress"
+      },
+      {
+        "isActive": true,
+        "name": "GraphQL",
+        "label": "GraphQL",
+        "value": "GraphQL"
+      },
+      {
+        "value": "Agile",
+        "name": "Agile",
+        "label": "Agile",
+        "isActive": true
+      },
+      {
+        "isActive": true,
+        "value": "Jest",
+        "label": "Jest",
+        "name": "Jest"
+      },
+      {
+        "name": "CSS",
+        "value": "CSS",
+        "isActive": false,
+        "label": "CSS"
+      },
+      {
+        "name": "JQuery",
+        "value": "JQuery",
+        "isActive": true,
+        "label": "JQuery"
+      },
+      {
+        "isActive": true,
+        "name": "AngularJS",
+        "label": "AngularJS",
+        "value": "AngularJS"
+      },
+      {
+        "name": "Ember",
+        "isActive": true,
+        "label": "Ember",
+        "value": "Ember"
+      },
+      {
+        "isActive": true,
+        "label": "Laravel",
+        "name": "Laravel",
+        "value": "Laravel"
+      },
+      {
+        "name": "NASA",
+        "value": "NASA",
+        "isActive": true,
+        "label": "NASA"
+      },
+      {
+        "label": "Satellite.js",
+        "name": "Satellite.js",
+        "value": "Satellite.js",
+        "isActive": true
+      }
+    ],
+    "motivation": "Working as an astronaut space developer is an extraordinary experience. It's where technology and interstellar exploration converge. Developing advanced systems and applications for space missions is a fascinating challenge. The scale of the astronaut program allows for growth and collaboration with experts from diverse disciplines. Striving for perfection and contributing to the advancement of space exploration are motivating factors for me.",
+    "isArchived": false,
+    "education": [
+      {
+        "name": "Bachelor of Bread making",
+        "endDate": 1441058400,
+        "startDate": 1346450400,
+        "institute": "University of Amsterdam"
+      },
+      {
+        "endDate": 1480546800,
+        "startDate": 1480546800,
+        "institute": "French culinary school",
+        "name": "Certified baguette maker"
+      }
+    ],
+    "introduction": "Buzz, an experienced frontend developer, combines a background in graphic design with a fascination for astronaut space development. With a versatile skill set, Buzz effectively collaborates with stakeholders and focuses on pushing the boundaries of frontend applications in the space industry. Always eager to learn and stay up-to-date with the latest techniques, Buzz brings a unique perspective to creating beautiful and user-friendly products for space exploration.",
+    "id": "lXYNimp8fskF3UgcmvLt",
+    "languages": [
+      {
+        "language": {
+          "name": "Dutch",
+          "id": "kKt4fFXWHQLd51tcHeco"
+        },
+        "proficiency": {
+          "description": "A native language ability refers to a language you grew up speaking and have mastered all aspects of, including grammar, complex concepts and extensive vocabulary.",
+          "name": "Native",
+          "id": "pNPRkppm5ehIOrTVOoTy"
+        }
+      },
+      {
+        "language": {
+          "id": "LWRYlhclW9CuDZwoMUTd",
+          "name": "English"
+        },
+        "proficiency": {
+          "id": "303rwQdOTklwxJ6kxTxe",
+          "name": "Fluent",
+          "description": "A fluent language speaker can comfortably speak, write and understand the language with ease. They have full knowledge of the language, including colloquialisms, but are not native speakers of the language"
+        }
+      },
+      {
+        "proficiency": {
+          "name": "Intermediate",
+          "id": "K3j4A0E0k12TurLDkhSb",
+          "description": "An intermediate language speaker can hold a basic conversation in the language while speaking at a slower pace than a native speaker and requiring some repetition to understand the conversation. They have limited vocabulary knowledge, understand grammatical rules and have adequate reading abilities."
+        },
+        "language": {
+          "name": "French",
+          "id": "QxKbpg30AGlYGKI0HXl6"
+        }
+      },
+      {
+        "languageId": "kKt4fFXWHQLd51tcHeco",
+        "proficiencyId": "pNPRkppm5ehIOrTVOoTy"
+      }
+    ],
+    "name": "Buzz Lightyear",
+    "projects": [
+      {
+        "role": "Frontend developer",
+        "company": "NASA",
+        "description": "Buzz has been an integral part of the NASA team, contributing to the development of a cutting-edge mission control application using Angular 5/6. The goal of this application is to provide real-time insights and data analysis for monitoring space missions and satellite operations. By leveraging advanced data aggregation and visualization techniques, Buzz's work ensures efficient monitoring and improved decision-making capabilities for NASA's space exploration endeavors. As the lead developer on the project, Buzz successfully oversaw the first production release of the mission control application, delivering critical functionality to support NASA's operations. Recently, Buzz transitioned to the innovation team, where they are actively involved in pioneering the next generation of software solutions to enhance NASA's mission control capabilities and drive further advancements in space exploration technology.",
+        "startDate": 1569839564,
+        "stackAndTechniques": [
+          {
+            "name": "Angular"
+          },
+          {
+            "name": "CSS"
+          },
+          {
+            "name": "JavaScript"
+          }
+        ],
+        "endDate": null
+      }
+    ],
+    "socialLinks": [
+      {
+        "link": "https://github.com/BeauTerHam",
+        "linkType": "github",
+        "title": null
+      },
+      {
+        "title": null,
+        "link": "https://twitter.com/withButter",
+        "linkType": "twitter"
+      },
+      {
+        "linkType": "linkedin",
+        "title": null,
+        "link": "https://www.linkedin.com/in/user-not-found/"
+      }
+    ],
+    "sideProjects": [
+      {
+        "link": "https://github.com",
+        "title": "Moon Walking",
+        "description": "Learning to walk on the moon is a must for every space developer."
+      }
+    ],
+    "publications": [
+      {
+        "link": "https://medium.com",
+        "title": "Why AngularJS is still the best framework in 2023",
+        "description": "You know you like it, so why you don't use it?!?"
+      },
+      {
+        "link": "http://dev.to/my-crosissant",
+        "description": "Using large language models to digest all date available in the world about creating croissants. It resulted in having the perfect recipe for a croissant.\nAfter multiple theft attempts the recipe is now stored in a vault at Le Louvre in Paris.",
+        "title": "How to use AI to create the perfect croissant"
+      }
+    ]
+  }
+  

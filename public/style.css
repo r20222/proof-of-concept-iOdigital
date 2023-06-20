@@ -146,14 +146,12 @@ details:hover summary{
 /* https://stackoverflow.com/questions/38213329/how-to-add-css3-transition-with-html5-details-summary-tag-reveal */
 details[open] summary ~ * {
     animation: smooth-details .5s ease-in-out;
-  }
+}
   
-  @keyframes smooth-details {
-    0%    {opacity: 0; margin-top: -10px}
-    100%  {opacity: 1; margin-top: 0px}
-  }
-
-  
+@keyframes smooth-details {
+0%    {opacity: 0; margin-top: -10px}
+100%  {opacity: 1; margin-top: 0px}
+}
 
 summary::marker {
     content: "";
@@ -299,6 +297,7 @@ footer{
     .compare-cv{
         top: 25rem;
         transition: .8s;
+        display:none;
     }
 
     .simplify-cv.js-enabled{
@@ -385,20 +384,6 @@ footer{
         top:-7rem;
     }
 
-    main.compare-clicked{
-        display:flex;
-        gap:1rem;
-        /* background-color: green; */
-    }
-
-    /* .first-resume, .second-resume{
-        width:50%;
-        
-    } */
-    
-  
-
-
     /* banner animatie */
     @keyframes skills{
         0%{
@@ -466,7 +451,7 @@ footer{
         list-style: none;
         padding-left:0rem;
         display: grid;
-        grid-template-columns: repeat(5, 1fr); 
+        grid-template-columns: repeat(4, 1fr); 
         grid-gap: 10px;
         max-width: 55em;
         margin-top: 2rem;
@@ -481,10 +466,10 @@ footer{
     }
     .refined-experience ul li {
         padding: 0rem 0rem .5rem .5rem;
-        font-size: 1.2rem;
+        font-size: 1rem;
         background-position: 0 0;
-
       }
+
 
     /* simplified version */
 .display-none{
@@ -493,6 +478,41 @@ footer{
 .display-block{
     display:block;
 }
+}
+
+@media screen and (min-width: 91em) {
+/* Compare clicked */
+    main.compare-clicked{
+        display:flex;
+        gap:1rem;
+        background-color: transparent;
+        /* background-color: green; */
+    }
+
+   
+    .first-resume.compare-clicked, .second-resume.compare-clicked{
+        width:50%;
+        background-color: var(--body-background);
+        padding: 2rem;
+        position: relative;
+        left:-4.7rem;
+        border-radius: 1rem;
+        min-width: 450px;
+    }
+    .profile-picture.compare-clicked{
+        width:5rem;
+        height:5rem;
+    }
+    .skills-animation-container.compare-clicked{
+        display:none;
+    }
+
+    .compare-cv{
+        top: 25rem;
+        transition: .8s;
+        display:block;
+    }
+
 }
 
 @media (prefers-reduced-motion) {

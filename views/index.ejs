@@ -296,27 +296,27 @@
 
 
             <section class="second-resume display-none">
-                <h1 class="name"><%- data.name %></h1>
-                <h2><%- data.personalia.role %></h2>
+                <h1 class="name"><%- data2.name %></h1>
+                <h2><%- data2.personalia.role %></h2>
 
                 <!-- social links -->
                 <section class="socials">
-                <% data.socialLinks.forEach(link=> { %>
+                <% data2.socialLinks.forEach(link=> { %>
                     <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
                             class="bx bxl-<%= link.linkType %>"></i></a>
                     <% }) %>
                 </section>
 
             <!-- profiel foto -->
-            <button class="profile-popover" popovertarget="my-popover">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg"
+            <button class="profile-popover" popovertarget="my-popover2">
+                <img src="https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg"
                     alt="profile image" title="profiel foto" class="profile-picture">
             </button>
 
-            <div id="my-popover" popover>
+            <div id="my-popover2" popover>
                 <figure>
                     <img class="profile-popover-img"
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg"
+                        src="https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg"
                         alt="profile image" title="profiel foto">
                 </figure>
             </div>
@@ -324,7 +324,7 @@
             <!-- refined skills -->
             <section class="skills-refined skills-flex-container display-none">
                 <ul class="skills-grid-container-refined">
-                    <% data.skills.forEach(skill=> { %>
+                    <% data2.skills.forEach(skill=> { %>
                         <li>
                             <%= skill.label %>
                         </li>
@@ -332,47 +332,30 @@
                 </ul>
             </section>
             <section class="refined-intro display-none">
-                <p>A real expert when it comes to component libraries & Design Systems
-                    having built multiple large scaling systems.</p>
+                <p>A highly skilled expert in component libraries and Design Systems, Buzz also holds the unique distinction of having encountered/discovered extraterrestrial beings during their work in the space industry.</p>
             </section>
             <section class="refined-experience display-none">
                 <ul>
-                    <li>10+ years of JavaScript experience</li>
-                    <li>4 years of web component experience</li>
-                    <li>WCAG aproved components at RaboBank</li>
-                    <li>Vattenfall, Rabobank, ONVZ zorgverzekeraar</li>
+                    <li>10+ years of JavaScript experience in the space industry</li>
+                    <li>6 years of experience developing web components</li>
+                    <li>WCAG-approved components for space missions</li>
+                    <li>NASA, ESA, and JAXA</li>
                 </ul>
             </section>
 
-            <!-- Kan hier beter het html marquee element voor gebruiken -->
-            <div class="skills-animation-container">
-                <ul class="skills-animation skills-animation1">
-                    <% data.skills.forEach(skill=> { %>
-                        <li>
-                            <%= skill.label %>
-                        </li>
-                        <% }); %>
-                </ul>
-                <ul class="skills-animation skills-animation2">
-                    <% data.skills.forEach(skill=> { %>
-                        <li>
-                            <%= skill.label %>
-                        </li>
-                        <% }); %>
-                </ul>
-            </div>
+           
 
             <section class="introduction">
                 <h2>Introduction</h2>
                 <p>
-                    <%- data.introduction %>
+                    <%- data2.introduction %>
                 </p>
             </section>
 
             <details>
                 <summary>Motivation</summary>
                 <p>
-                    <%- data.motivation %>
+                    <%- data2.motivation %>
                 </p>
             </details>
 
@@ -380,21 +363,12 @@
                 <summary>Skills</summary>
                 <div class="skills-flex-container">
                     <ul class="skills-grid-container">
-                        <% data.skills.forEach(skill=> { %>
+                        <% data2.skills.forEach(skill=> { %>
                             <li>
                                 <%= skill.label %>
                             </li>
                             <% }); %>
                     </ul>
-                    <div class="video-container">
-                        <lottie-player class="video1" src="https://assets4.lottiefiles.com/packages/lf20_w51pcehl.json"
-                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop
-                            autoplay></lottie-player>
-                        <lottie-player class="video2"
-                            src="https://assets10.lottiefiles.com/packages/lf20_78DCvgGZC7.json"
-                            background="transparent" speed="1" style="width: 300px; height: 300px;" loop
-                            autoplay></lottie-player>
-                    </div>
                 </div>
             </details>
 
@@ -404,7 +378,7 @@
 
             <details>
                 <summary>Projects via iO</summary>
-                <% data.projects.forEach(project=> { %>
+                <% data2.projects.forEach(project=> { %>
 
                     <!-- Chatgpt heeft mij geholpen de data correct op te halen, het gaat om een unix-tijdstempel -->
                     <!-- Hieronder maak ik een variabel van de nummers die in de json staan (timestamp) -->
@@ -439,7 +413,7 @@
 
             <details>
                 <summary>Work experience</summary>
-                <% data.experience.forEach(experience=> { %>
+                <% data2.experience.forEach(experience=> { %>
 
                     <!-- Voor de startdata -->
                     <% const timestamp=experience.startDate %>
@@ -473,7 +447,7 @@
 
             <details>
                 <summary>Education</summary>
-                <% data.education.forEach(edu=> { %>
+                <% data2.education.forEach(edu=> { %>
 
                     <!-- Voor de startdata -->
                     <% const timestamp=edu.startDate %>
@@ -498,7 +472,7 @@
 
             <details>
                 <summary>Languages</summary>
-                <% data.languages.forEach(lang=> { %>
+                <% data2.languages.forEach(lang=> { %>
                     <section>
                         <% if (lang.language && lang.proficiency) { %>
                             <section>
@@ -513,7 +487,7 @@
 
             <details>
                 <summary>Publications</summary>
-                <% data.publications.forEach(pub=> { %>
+                <% data2.publications.forEach(pub=> { %>
                     <section>
                         <h4><%- pub.title %></h4>
                         <p><%- pub.description %></p>
@@ -524,7 +498,7 @@
 
             <details>
                 <summary>Side projects</summary>
-                <% data.sideProjects.forEach(side=> { %>
+                <% data2.sideProjects.forEach(side=> { %>
                     <section>
                         <h4><%- side.title %></h4>
                         <p><%- side.description %></p>
@@ -536,7 +510,7 @@
             <details>
                 <summary>Social links</summary>
                 <section class="socials"></section>
-                <% data.socialLinks.forEach(link=> { %>
+                <% data2.socialLinks.forEach(link=> { %>
                     <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
                             class="bx bxl-<%= link.linkType %>"></i></a>
                     <% }) %>

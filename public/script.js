@@ -5,14 +5,17 @@ const skillsOdd = document.querySelectorAll('.skills-grid-container li:nth-child
 const simplifyButton = document.querySelector('.simplify-cv')
 const skillAnimationsBanner = document.querySelector('.skills-animation-container')
 const details = document.querySelectorAll('details')
-const skillsRefined = document.querySelector('.skills-refined')
-const refinedIntro = document.querySelector('.refined-intro')
-const refinedExperience = document.querySelector('.refined-experience')
-const introduction = document.querySelector('.introduction')
+const skillsRefined = document.querySelectorAll('.skills-refined')
+const refinedIntro = document.querySelectorAll('.refined-intro')
+const refinedExperience = document.querySelectorAll('.refined-experience')
+const introduction = document.querySelectorAll('.introduction')
 const compareButton = document.querySelector('.compare-cv')
 const main = document.querySelector('main')
 const resumeOne = document.querySelector('.first-resume')
 const resumeTwo = document.querySelector('.second-resume')
+const profilePicture = document.querySelectorAll('.profile-picture')
+const skillsGridRefined = document.querySelectorAll('.skills-grid-container-refined')
+const favorite = document.querySelector('.hire-button')
 
 
 const skillsArray = Array.from(skillsEven);
@@ -44,7 +47,6 @@ radioButtons.forEach((radioButton) => {
 
 
   // skills animation
-
   skillsArray.forEach(skill => {
     skill.addEventListener('click', () => {
       if (vid2.classList.contains('skill-clicked')) {
@@ -64,10 +66,11 @@ radioButtons.forEach((radioButton) => {
       } else {
         vid2.classList.add('skill-clicked');
       }
-      
     })
   });
 
+
+ 
 
 // hire button animatie
   const lottiePlayer = document.getElementById('lottiePlayer');
@@ -83,15 +86,25 @@ lottiePlayer.addEventListener('click', () => {
 simplifyButton.addEventListener('click', () => {
 
   skillAnimationsBanner.classList.toggle('display-none')
-  skillsRefined.classList.toggle('display-block')
-  refinedIntro.classList.toggle('display-block')
-  refinedExperience.classList.toggle('display-block')
-  introduction.classList.toggle('display-none')
 
-    details.forEach(detail => {
-      detail.classList.toggle('display-none')
-    })
+  skillsRefined.forEach(skill =>{
+    skill.classList.toggle('display-block')
+  })
+  refinedIntro.forEach(refinedIntro =>{
+    refinedIntro.classList.toggle('display-block')
+  })
+  refinedExperience.forEach(experience =>{
+    experience.classList.toggle('display-block')
+  })
+  introduction.forEach(intro => {
+    intro.classList.toggle('display-none')
+  })
+  details.forEach(detail => {
+    detail.classList.toggle('display-none')
+  })
     
+  // simplifyButton.classList.toggle('simplify-clicked')
+
 });
 
 // bron voor maken doorlopende banner: https://codepen.io/Jaskaranbir/pen/JKNgMb?editors=1100
@@ -111,7 +124,20 @@ simplifyButton.addEventListener('click', () => {
 
 // compare button
 
-// compareButton.addEventListener('click', () => {
-//   main.classList.toggle('compare-clicked')
-//   resumeOne.classList.toggle('display-block')
-// });
+compareButton.addEventListener('click', () => {
+  main.classList.toggle('compare-clicked')
+  resumeTwo.classList.toggle('display-block')
+  resumeOne.classList.toggle('compare-clicked')
+  resumeTwo.classList.toggle('compare-clicked')
+  profilePicture.forEach(picture => {
+    picture.classList.toggle('compare-clicked')
+  })
+  skillAnimationsBanner.classList.toggle('compare-clicked')
+
+  compareButton.classList.toggle('compare-button-clicked')
+
+  skillAnimations.classList.toggle('display-none')
+  favorite.classList.toggle('display-none')
+});
+
+

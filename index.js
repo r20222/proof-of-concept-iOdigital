@@ -18,6 +18,8 @@ const fs = require('fs');
 const jsonData = fs.readFileSync('beau-ter-ham.json');
 const data = JSON.parse(jsonData);
 
+const jsonData2 = fs.readFileSync('buzz-lightyear.json');
+const data2 = JSON.parse(jsonData2);
 
 // test video
 // const video = fs.readFileSync('computer-lottie.json');
@@ -34,7 +36,7 @@ app.get('/', (request, response) => {
     // console.log(data);
 
 
-      response.render('index', { data: data});
+      response.render('index', { data: data, data2: data2});
 
   })
 
