@@ -94,7 +94,7 @@ simplifyButton.addEventListener('click', () => {
     
 });
 
-
+// bron voor maken doorlopende banner: https://codepen.io/Jaskaranbir/pen/JKNgMb?editors=1100
 // skills animation continuous test
 
 // const ulElements = skillAnimationsBanner.querySelectorAll('ul');
@@ -108,11 +108,10 @@ simplifyButton.addEventListener('click', () => {
   // Pas de breedte van de container aan
 // skillAnimationsBanner.style.width = `${totalWidth}px`;
 
-console.log(`${totalWidth}px`)
 
 // compare button
 
-compareButton.addEventListener('click', () => {
-  main.classList.toggle('compare-clicked')
-  resumeOne.classList.toggle('display-block')
-});
+// compareButton.addEventListener('click', () => {
+//   main.classList.toggle('compare-clicked')
+//   resumeOne.classList.toggle('display-block')
+// });

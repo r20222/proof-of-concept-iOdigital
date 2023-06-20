@@ -56,6 +56,7 @@ p{
 }
 .name{
     margin-top:0;
+    font-size: 2.5rem;
 }
 .skills-animation-container{
     background-color: var(--animation-container-color);
@@ -183,7 +184,7 @@ article p{
     grid-gap: 10px;
 }
 .techniques{
-    padding: 1rem 1rem 1rem 1rem;
+    padding: .3rem 1rem .3rem 1rem;
     background-color: var(--skills-social-color);
     border-radius: 1rem;
     color: black;
@@ -258,6 +259,7 @@ footer{
         padding:.5rem;
         border-radius: 1rem;
         max-width: 8rem;
+        transition: 1s;
     }
     input{
         cursor: pointer;
@@ -413,8 +415,16 @@ footer{
         grid-gap: 10px;
         max-width: 35em;
     }
-    .skills-grid-container li, .skills-grid-container-refined li{
+    .skills-grid-container li{
         padding:1rem 1rem 1rem 1rem;
+        background-color: var(--skills-social-color);
+        border-radius: 1rem;
+        color:black;
+        display:flex;
+        justify-content: center;
+    }
+    .skills-grid-container-refined li{
+        padding:.3rem 1rem .3rem 1rem;
         background-color: var(--skills-social-color);
         border-radius: 1rem;
         color:black;
@@ -450,6 +460,20 @@ footer{
         max-width: 55em;
         margin-top: 2rem;
     }
+    .refined-intro{
+        font-size: 1.2rem;
+    }
+    /* bron svg: https://www.svgshapes.in/, bron style list https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists */
+    .refined-experience ul{
+        list-style-image: url('/fire.svg');
+        background-size: 2.5rem 2.5rem;
+    }
+    .refined-experience ul li {
+        padding: 0rem 0rem .5rem .5rem;
+        font-size: 1.2rem;
+        background-position: 0 0;
+
+      }
 
     /* simplified version */
 .display-none{
