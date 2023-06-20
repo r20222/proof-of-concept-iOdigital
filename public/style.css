@@ -140,9 +140,20 @@ details summary::after{
     content: "▼";
 }
 details:hover summary{
-
     cursor: pointer;
 }
+
+/* https://stackoverflow.com/questions/38213329/how-to-add-css3-transition-with-html5-details-summary-tag-reveal */
+details[open] summary ~ * {
+    animation: smooth-details .5s ease-in-out;
+  }
+  
+  @keyframes smooth-details {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+  }
+
+  
 
 summary::marker {
     content: "";
