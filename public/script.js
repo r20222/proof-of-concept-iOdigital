@@ -148,5 +148,7 @@ function elementSupportsAttribute(attribute) {
 
   } else {
     console.log(false);
+ popover.classList.add('popover-not-working')
+
   }
 };

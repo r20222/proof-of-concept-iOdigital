@@ -544,6 +544,13 @@ footer{
         scrollbar-gutter: stable;
     }
 }
+
+.popover-image-astronaut.popover-works{
+    display:block;
+}
+.popover-image-astronaut.popover-not-working{
+    display:none;
+}
 /* div[popover]{
     display:none;
 }
