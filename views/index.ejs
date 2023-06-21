@@ -2,7 +2,7 @@
 
     <div class="flexbox-desktop">
         <!-- onderstaande code voor verschillende achtergronden -->
-        <form action="" method="" class="background-buttons">
+        <form action="#" method="#" class="background-buttons">
             <fieldset>
                 <legend>Background picker</legend>
 
@@ -67,8 +67,8 @@
                 <figure>
                     <img class="profile-popover-img"
                         src="/Beau-ter-ham.jpg"
-                        alt="profile image" title="profiel foto" loading="lazy" width="10rem"
-                        height="10rem">
+                        alt="profile image" title="profiel foto" loading="lazy" width="160px"
+                        height="160px">
                 </figure>
             </div>
 
@@ -286,12 +286,12 @@
 
             <details>
                 <summary>Social links</summary>
-                <section class="socials"></section>
-                <% data.socialLinks.forEach(link=> { %>
-                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
-                            class="bx bxl-<%= link.linkType %>"></i></a>
-                    <% }) %>
-                        </section>
+                <section class="socials">
+                    <% data.socialLinks.forEach(link=> { %>
+                        <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
+                                class="bx bxl-<%= link.linkType %>"></i></a>
+                        <% }) %>
+                </section>
             </details>
             </section>
 
@@ -320,8 +320,8 @@
             <button class="profile-popover" popovertarget="my-popover2">
                 <img src="/Buzz-lightyear.jpg"
                     alt="profile image" title="profiel foto" class="profile-picture" loading="lazy"
-                    width="10rem"
-                    height="10rem">
+                    width="160px"
+                    height="160px">
             </button>
 
             <div id="my-popover2" popover>
@@ -520,7 +520,7 @@
 
             <details>
                 <summary>Social links</summary>
-                <section class="socials"></section>
+                <section class="socials">
                 <% data2.socialLinks.forEach(link=> { %>
                     <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
                             class="bx bxl-<%= link.linkType %>"></i></a>
@@ -530,22 +530,5 @@
             </section>
 
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-        <!-- teesttest -->
-
-
     </div>
-
-    <!-- https://fuzzy-yak-life-jacket.cyclic.app/ -->
     <%- include('./partials/foot.ejs') %>
