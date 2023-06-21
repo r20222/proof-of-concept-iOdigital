@@ -18,7 +18,8 @@
 Met deze online CV presentatie tool wordt het voortaan veel makkelijker om een CV op te sturen naar een hiring manager. Er is geen PDF meer nodig.
 
 <!-- Voeg een mooie poster visual toe 📸 -->
-![image](https://github.com/r20222/proof-of-concept-iOdigital/assets/101579892/dfbce6ce-c67b-4636-baef-051e67f7bc7c)
+![image](https://github.com/r20222/proof-of-concept-iOdigital/assets/101579892/6dd8b4d3-3834-4a4a-af81-cfb0f78086b2)
+
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 Live link: https://fuzzy-yak-life-jacket.cyclic.app/
