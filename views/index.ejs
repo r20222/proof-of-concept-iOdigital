@@ -45,22 +45,28 @@
                 <!-- social links -->
                 <section class="socials">
                 <% data.socialLinks.forEach(link=> { %>
-                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>"><i
-                            class="bx bxl-<%= link.linkType %>"></i></a>
+                    <a title="<%- link.linkType %>" class="social-links" href="<%- link.link %>">
+                            <i class="bx bxl-<%= link.linkType %>"></i>
+                        </a>
                     <% }) %>
                 </section>
 
             <!-- profiel foto -->
+            <!-- https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg -->
             <button class="profile-popover" popovertarget="my-popover">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg"
-                    alt="profile image" title="profiel foto" class="profile-picture">
+                <img src="/Beau-ter-ham.jpg"
+                    alt="profile image" 
+                    title="profiel foto" 
+                    class="profile-picture"
+                    loading="lazy">
             </button>
 
             <div id="my-popover" popover>
                 <figure>
                     <img class="profile-popover-img"
-                        src="https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg"
-                        alt="profile image" title="profiel foto">
+                        src="/Beau-ter-ham.jpg"
+                        alt="profile image" title="profiel foto" loading="lazy" width="10rem"
+                        height="10rem">
                 </figure>
             </div>
 
@@ -308,16 +314,19 @@
                 </section>
 
             <!-- profiel foto -->
+            <!-- https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg -->
             <button class="profile-popover" popovertarget="my-popover2">
-                <img src="https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg"
-                    alt="profile image" title="profiel foto" class="profile-picture">
+                <img src="/Buzz-lightyear.jpg"
+                    alt="profile image" title="profiel foto" class="profile-picture" loading="lazy"
+                    width="10rem"
+                    height="10rem">
             </button>
 
             <div id="my-popover2" popover>
                 <figure>
                     <img class="profile-popover-img"
-                        src="https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg"
-                        alt="profile image" title="profiel foto">
+                        src="/Buzz-lightyear.jpg"
+                        alt="profile image" title="profiel foto" loading="lazy" >
                 </figure>
             </div>
 

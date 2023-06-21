@@ -16,19 +16,16 @@ const resumeTwo = document.querySelector('.second-resume')
 const profilePicture = document.querySelectorAll('.profile-picture')
 const skillsGridRefined = document.querySelectorAll('.skills-grid-container-refined')
 const favorite = document.querySelector('.hire-button')
-
-
 const skillsArray = Array.from(skillsEven);
 const skillsArray2 = Array.from(skillsOdd);
 const vid1 = document.querySelector('.video1')
 const vid2 = document.querySelector('.video2')
 
-
 // JavaScript Enabled?
-
 backgroundButtons.classList.add('js-enabled')
 skillAnimations.classList.add('js-enabled')
 simplifyButton.classList.add('js-enabled')
+compareButton.classList.add('js-enabled')
 
 // verander body background 
 

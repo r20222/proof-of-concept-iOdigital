@@ -27,7 +27,7 @@
 html{
     font-family: 'Questrial', sans-serif;
     color: var(--text-color);
-    scrollbar-gutter: stable;
+    font-display: swap;
 }
 body{
     background-color: var(--body-background);
@@ -162,11 +162,7 @@ summary::marker {
 article p{
     overflow-wrap: break-word;
 }
-@supports (text-wrap:balance) {
-    article p{
-        text-wrap: balance;
-    }
-}
+
 
 /* skills layout */
 .skills-grid-container{
@@ -507,7 +503,7 @@ footer{
         display:none;
     }
 
-    .compare-cv{
+    .compare-cv.js-enabled{
         top: 25rem;
         transition: .8s;
         display:block;
@@ -535,5 +531,17 @@ footer{
     }
     .simplify-cv:hover, .compare-cv:hover{
         padding-top:0rem;
+    }
+}
+
+@supports (text-wrap:balance) {
+    article p{
+        text-wrap: balance;
+    }
+}
+
+@supports (scrollbar-gutter: stable){
+    html{
+        scrollbar-gutter: stable;
     }
 }
