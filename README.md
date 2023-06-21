@@ -77,6 +77,9 @@ Profielfoto's van astronauten:
 * https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg
 * https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg
 
+Readme foto verschillende apparaten heb ik gemaakt met behulp van Canva:
+* https://www.canva.com/
+
 Ik heb regelmatig ook gebruik gemaakt chatGPT.
 
 ## Licentie
