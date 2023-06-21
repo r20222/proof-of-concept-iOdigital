@@ -138,3 +138,15 @@ compareButton.addEventListener('click', () => {
 });
 
 
+// popover 
+elementSupportsAttribute("popover")
+
+function elementSupportsAttribute(attribute) {
+  var popover = document.querySelector('#my-popover');
+  if (attribute in popover) {
+    console.log(true);
+
+  } else {
+    console.log(false);
+  }
+};

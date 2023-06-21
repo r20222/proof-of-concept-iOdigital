@@ -544,3 +544,13 @@ footer{
         scrollbar-gutter: stable;
     }
 }
+/* div[popover]{
+    display:none;
+}
+
+@supports (popover){
+    div[popover]{
+        display:block;
+    }
+    
+} */
