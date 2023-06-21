@@ -73,6 +73,9 @@ Het toevoegen van een popover:
 Het toevoegen van text-wrap: balance:
 * https://developer.chrome.com/blog/css-text-wrap-balance/
 
+Animatie banner met skills heb ik gemaakt met behulp van een codepen:
+* https://codepen.io/Jaskaranbir/pen/JKNgMb
+
 Profielfoto's van astronauten:
 * https://upload.wikimedia.org/wikipedia/commons/5/53/Astronaut_Mike_Hopkins_on_Dec._24_Spacewalk.jpg
 * https://cdn.wccftech.com/wp-content/uploads/2016/07/Astronauts.jpg
