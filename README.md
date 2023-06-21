@@ -18,7 +18,8 @@
 Met deze online CV presentatie tool wordt het voortaan veel makkelijker om een CV op te sturen naar een hiring manager. Er is geen PDF meer nodig.
 
 <!-- Voeg een mooie poster visual toe 📸 -->
-![image](https://github.com/r20222/proof-of-concept-iOdigital/assets/101579892/6dd8b4d3-3834-4a4a-af81-cfb0f78086b2)
+<img src="https://github.com/r20222/proof-of-concept-iOdigital/assets/101579892/6dd8b4d3-3834-4a4a-af81-cfb0f78086b2" width="500px">
+<img src="https://github.com/r20222/proof-of-concept-iOdigital/assets/101579892/8955436e-c73e-496c-ac04-310f9aa34bb7" width="500px">
 
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
