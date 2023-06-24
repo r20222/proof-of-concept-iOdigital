@@ -2,6 +2,7 @@
 
 # iOdigital online CV presentatie tool
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+Tijdens deze sprint heb ik voor iOdigital een online CV presentatie tool gemaakt. Dit is een online CV die makkelijk gestuurd kan worden naar een hiring manager.
 
 ## Inhoudsopgave
 
